@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "longNat.h"
 #include "longNatFunctions.h"
+#include "helpFunctions.h"
 
 LNGNT MUL_ND_N(LNGNT numb, int D)
 {
@@ -27,13 +28,7 @@ LNGNT MUL_ND_N(LNGNT numb, int D)
                     result.A = (int*)realloc(result.A, (result.n)*sizeof(int));
                     result.A[result.n-1] = mod;
                 }
-                int temp;
-                for(int i=0; i<result.n; i++)
-                {
-                    temp = result.A[i];
-                    result.A[i]=result.A[result.n-1];
-                    result.A[result.n-1]=temp;
-                }
+				//reverseN(&result);
             }
         }
         else
@@ -41,9 +36,6 @@ LNGNT MUL_ND_N(LNGNT numb, int D)
     }
     else
         printf("\nОшибка, числа не существует!\n");
-
-    for(int i=0; i<result.n; i++)
-        printf("%d", result.A[i]);
 
     return result;
 }

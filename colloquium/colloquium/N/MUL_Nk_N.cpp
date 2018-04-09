@@ -10,7 +10,7 @@ LNGNT MUL_Nk_N(LNGNT str, int k)
 	{
 		for (int i = str.n; i < str.n+k; i++)
 		{
-			str.A = (int*)realloc(str.A, str.n+i * sizeof(int*));
+			str.A = (int*)realloc(str.A, (str.n+i)* sizeof(int*));
 			*(str.A + i) = 0;
 		}
 		str.n += k;
