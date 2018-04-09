@@ -76,14 +76,14 @@ int chooseFunctionN() {
 			b = readN();
 			printN(SUB_NN_N(a, b));
 			break;
-		case 6://блеать не работает
+		case 6:
 			printIN();
 			a = readN();
 			cout << "Print numeral:" << endl;
 			cin >> k;
 			printN(MUL_ND_N(a,k));
 			break;
-		case 7: //блеать не работает
+		case 7:
 			printIN();
 			a = readN();
 			cout << "Print numeral:" << endl;
@@ -144,7 +144,7 @@ int chooseFunctionN() {
 		default: printError(); number = 0; break;
 		}
 	} while (number == 0);
-	freeN(&a);
-	freeN(&b);
+	//freeN(&a);
+	//freeN(&b);
 	return number;
 }
