@@ -56,5 +56,5 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 		for(i = 0; i < sub.n; i++)
 			sub.A[i] = z[i];
 	}
-	return(sub);
+	return sub;
 }

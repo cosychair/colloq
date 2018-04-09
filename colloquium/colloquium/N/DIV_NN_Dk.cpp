@@ -38,7 +38,7 @@ LNGNT DIV_NN_Dk(LNGNT pervoe,LNGNT vtoroe)
         answer.n = 1;
         answer.A = (int*) malloc(sizeof(int));
         *(answer.A) = k;
-        MUL_Nk_N(&answer, pervoe.n-len);
+        answer = MUL_Nk_N(answer, pervoe.n-len);
     }
     else
         error = 1;

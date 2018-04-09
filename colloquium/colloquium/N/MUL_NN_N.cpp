@@ -14,7 +14,7 @@ LNGNT MUL_NN_N(LNGNT First, LNGNT Second)
 		for (int i = First.n - 1; i >= 0; --i)
 		{
 			a = MUL_ND_N(Second, *(First.A + i));
-			MUL_Nk_N(&a, First.n - i - 1);
+			a = MUL_Nk_N(a, First.n - i - 1);
 			ans = ADD_NN_N(a, ans);
 		}
 	}

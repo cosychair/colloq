@@ -104,7 +104,7 @@ MUL_ND_N
 Возвращаемый тип - LNGNT
 */
 
-void MUL_Nk_N(LNGNT* str, int k);
+LNGNT MUL_Nk_N(LNGNT str, int k);
 /*
 MUL_Nk_N
 
@@ -117,7 +117,7 @@ MUL_Nk_N
 1)str - возводимое число
 2)k - степень
 
-Ничего не возвращает, так как меняет само число по адресу
+Функция возращает тип - LNGNT
 */
 
 LNGNT MUL_NN_N(LNGNT First, LNGNT Second);
