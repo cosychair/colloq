@@ -5,8 +5,11 @@
 using namespace std;
 
 void printN(LNGNT a) {
-	for (int i = 0; i < a.n; ++i)
-		cout<<*(a.A + i);
+	if (a.A != NULL&&a.n!=0)
+		for (int i = 0; i < a.n; ++i)
+			cout << *(a.A + i);
+	else
+		cout << "This number doesn`t exist." << endl;
 }
 
 void freeN(LNGNT* a)
