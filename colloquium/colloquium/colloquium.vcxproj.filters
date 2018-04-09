@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\N">
+      <UniqueIdentifier>{7fab5d09-b54a-4c49-9390-37bb9cc092d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\P">
+      <UniqueIdentifier>{de41b595-3779-441d-a862-2fa0b46a1e73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Q">
+      <UniqueIdentifier>{2d8e593b-3b3b-41ea-b59d-d0e3466a84ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Z">
+      <UniqueIdentifier>{e2329f10-7f6e-4ab2-93af-376d8c65d3c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\NH">
+      <UniqueIdentifier>{06566b33-152a-40fb-bf78-49af900f580f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\PH">
+      <UniqueIdentifier>{6035a45b-6f44-48ff-b1c0-1df2740037dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\QH">
+      <UniqueIdentifier>{56e372c8-454f-49d8-990f-3643007705b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\ZH">
+      <UniqueIdentifier>{61472b0f-4272-49ad-8069-b1db1b02c7e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Output">
+      <UniqueIdentifier>{ed2616bd-5b0d-44ac-86ea-92e64f80b247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\OutputH">
+      <UniqueIdentifier>{3137bc51-48c0-47bf-8323-1fdf7637bcd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Input">
+      <UniqueIdentifier>{38e8ba3f-c01b-45f2-b702-9f32d71afa97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\InputH">
+      <UniqueIdentifier>{69192b59-2f58-45a1-a528-db62db0e2ba6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="N\longNatFunctions.h">
+      <Filter>Файлы заголовков\NH</Filter>
+    </ClInclude>
+    <ClInclude Include="N\helpFunctions.h">
+      <Filter>Файлы заголовков\NH</Filter>
+    </ClInclude>
+    <ClInclude Include="N\longNat.h">
+      <Filter>Файлы заголовков\NH</Filter>
+    </ClInclude>
+    <ClInclude Include="Output\outputN.h">
+      <Filter>Файлы заголовков\OutputH</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\inputN.h">
+      <Filter>Файлы заголовков\InputH</Filter>
+    </ClInclude>
+    <ClInclude Include="Output\outputCom.h">
+      <Filter>Файлы заголовков\OutputH</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="colloquium.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="N\MUL_ND_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\SUB_NN_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\ADD_NN_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\ADD_1N_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\helpFunctions.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\_NZER_N_B.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\COM_NN_D.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\SUB_NDN_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\MOD_NN_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\MUL_NN_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\MUL_Nk_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\GCF_NN_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\DIV_NN_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\DIV_NN_Dk.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="N\LCM_NN_N.cpp">
+      <Filter>Исходные файлы\N</Filter>
+    </ClCompile>
+    <ClCompile Include="Output\outputN.cpp">
+      <Filter>Исходные файлы\Output</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\inputN.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Output\outputCom.cpp">
+      <Filter>Исходные файлы\Output</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
