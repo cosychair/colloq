@@ -78,6 +78,18 @@
     <ClInclude Include="Output\outputCom.h">
       <Filter>Файлы заголовков\OutputH</Filter>
     </ClInclude>
+    <ClInclude Include="Z\longInteger.h">
+      <Filter>Файлы заголовков\ZH</Filter>
+    </ClInclude>
+    <ClInclude Include="Z\longIntFunctions.h">
+      <Filter>Файлы заголовков\ZH</Filter>
+    </ClInclude>
+    <ClInclude Include="Output\outputZ.h">
+      <Filter>Файлы заголовков\OutputH</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\inputZ.h">
+      <Filter>Файлы заголовков\InputH</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -139,6 +151,42 @@
     </ClCompile>
     <ClCompile Include="Output\outputCom.cpp">
       <Filter>Исходные файлы\Output</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\MUL_ZM_Z.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\ABS_Z_N.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\DIV_ZZ_Z.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\SUB_ZZ_Z.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\MUL_ZZ_Z.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\ADD_ZZ_Z.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\TRANS_Z_N.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\TRANS_N_Z.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\POZ_Z_D.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Z\MOD_ZZ_Z.cpp">
+      <Filter>Исходные файлы\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Output\outputZ.cpp">
+      <Filter>Исходные файлы\Output</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\inputZ.cpp">
+      <Filter>Исходные файлы\Input</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

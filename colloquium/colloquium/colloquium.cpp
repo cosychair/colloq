@@ -5,9 +5,14 @@
 #include "../colloquium/Output/outputN.h"
 #include "../colloquium/Output/outputCom.h"
 #include "../colloquium/Input/inputN.h"
+#include "../colloquium/Z/longInteger.h"
+#include "../colloquium/Z/longIntFunctions.h"
+#include "../colloquium/Input/inputZ.h"
+#include "../colloquium/Output/outputZ.h"
 using namespace std;
 
 int chooseFunctionN();
+int chooseFunctionZ();
 
 int main()
 {
@@ -17,10 +22,15 @@ int main()
 		cin >> type;
 		switch (type) {
 		case 'N':
+			system("cls");
 			printMenuN(); 
 			chooseFunctionN();
 			break;
-		case 'Z': break;
+		case 'Z':
+			system("cls");
+			printMenuZ();
+			chooseFunctionZ();
+			break; 
 		case 'Q': break;
 		case 'P': break;
 		default: printError(); type = 'd'; break;
@@ -31,10 +41,12 @@ int main()
 
 int chooseFunctionN() {
 	LNGNT a, b;
-	int k;
+	a.A = b.A = NULL;
+		int k;
 	int number = 0;
 	do {
 		cin >> number;
+		system("cls");
 		switch (number) {
 		case 1: 
 			printIN();
@@ -90,7 +102,7 @@ int chooseFunctionN() {
 			cin >> k;
 			printN(MUL_Nk_N(a, k));
 			break;
-		case 8: //блеать не работает
+		case 8: 
 			printIN();
 			a = readN();
 			printIN();
@@ -144,7 +156,90 @@ int chooseFunctionN() {
 		default: printError(); number = 0; break;
 		}
 	} while (number == 0);
-	//freeN(&a);
-	//freeN(&b);
+	freeN(&a);
+	freeN(&b);
+	return number;
+}
+
+int chooseFunctionZ() {
+	LNGINT a, b;
+	LNGNT n;
+	a.A = b.A = n.A = NULL;
+	int number = 0;
+	do {
+		cin >> number;
+		system("cls");
+		switch (number) {
+		case 1:
+			printIN();
+			a = readZ();
+			printN(ABS_Z_N(a));
+			break;
+		case 2:
+			printIN();
+			a = readZ();
+			switch(POZ_Z_D(a))
+			{
+			case 0: cout << "This number izn`t zero." << endl; break;
+			case 1: cout << "This number is negative." << endl; break;
+			case 2: cout << "This number is positive." << endl; break;
+			default: printError(); break;
+			}
+			break;
+		case 3:
+			printIN();
+			a = readZ();
+			printZ(MUL_ZM_Z(a));
+			break;
+		case 4:
+			printIN();
+			n = readN();
+			printZ(TRANS_N_Z(n));
+			break;
+		case 5:
+			printIN();
+			a = readZ();
+			printN(TRANS_Z_N(a));
+			break;
+		case 6:
+			printIN();
+			a = readZ();
+			printIN();
+			b = readZ();
+			printZ(ADD_ZZ_Z(a,b));
+			break;
+		case 7:
+			printIN();
+			a = readZ();
+			printIN();
+			b = readZ();
+			printZ(SUB_ZZ_Z(a, b));
+			break;
+		case 8:
+			printIN();
+			a = readZ();
+			printIN();
+			b = readZ();
+			printZ(MUL_ZZ_Z(a, b));
+			break;
+		case 9:
+			printIN();
+			a = readZ();
+			printIN();
+			b = readZ();
+			printZ(DIV_ZZ_Z(a, b));
+			break;
+		case 10:
+			printIN();
+			a = readZ();
+			printIN();
+			b = readZ();
+			printZ(MOD_ZZ_Z(a, b));
+			break;
+		default: printError(); number = 0; break;
+		}
+	} while (number == 0);
+	freeZ(&a);
+	freeZ(&b);
 	return number;
 }

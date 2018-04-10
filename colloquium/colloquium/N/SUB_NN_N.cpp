@@ -6,55 +6,65 @@
 
 LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 {
-	int i = 0;
-	int *z = new int[x.n];
-	LNGNT sub;
-	int l = 0;
-	bool t = false;
-	while(i != y.n )
-	{	
-		z[i] = x.A[i] - y.A[i];
-		if (t)
-			--z[i];
-		else;
-		t = false;
-		if (x.A[i] < 0)
-		{
-			t = true;
-			z[i] += 10;
-		}
-		else;
-	}
-	while(i != x.n)
-	{	
-		z[i] = x.A[i];
-		if (t)
-			--z[i];
-		else;
-		t = false;
-		if (x.A[i] < 0)
-		{
-			t = true;
-			z[i] += 10;
-		}
-		else;
-	}
-	i--; 
-	while(i != -1 && z[i] != 0)
+	int error = 0;
+	LNGNT answer;
+	if (x.A && y.A)
 	{
-		i--;
-	}
-	if (i == -1)
-	{
-		sub.A = NULL;
-		sub.n = 0;
+		int comp = COM_NN_D(x, y);
+		error = comp == -1;
+		if (!error)
+		{
+			if (comp == 1)
+				swapN(&x, &y);
+
+			answer.A = (int*)malloc(y.n * sizeof(int));
+			answer.n = y.n;
+
+			reverseN(&x);
+			reverseN(&y);
+
+			int min = 0;
+			for (int i = 0; i < y.n; i++)
+			{
+				*(answer.A + i) = *(x.A + i) - *(y.A + i) - min;
+				min = 0;
+				if (*(answer.A + i) < 0)
+				{
+					*(answer.A + i) += 10;
+					min = 1;
+				}
+
+			}
+			if (y.n != x.n)
+			{
+				for (int i = y.n; i < x.n; ++i)
+				{
+					*(answer.A + i) += *(x.A + i) - min;
+					min = 0;
+				}
+			}
+
+			int fl = 0,	i;
+
+			for (i = x.n - 1; i >= 0 && !fl; --i) 
+				fl = *(answer.A + i) != 0;
+
+			
+			if (i != x.n)
+			{
+				answer.n = i;
+				answer.A = (int*)realloc(answer.A, i * sizeof(int));
+			}
+			reverseN(&answer);
+			reverseN(&x);
+			reverseN(&y);
+		}
 	}
 	else
-	{
-		sub.n = i + 1;
-		sub.A = new int[sub.n];
-		for(i = 0; i < sub.n; i++)
-			sub.A[i] = z[i];
-	}
-	return sub;
+		error = 1;
+
+	if (error)
+		printf("\nОшибка, одно из чисел не существует!\n");
+
+	return answer;
 }

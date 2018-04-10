@@ -14,7 +14,7 @@ void printN(LNGNT a) {
 
 void freeN(LNGNT* a)
 {
-	if (*a->A)
+	if (a->A)
 		free(a->A);
 	a->n = 0;
 }

@@ -10,7 +10,6 @@ longNatFunctions.h содержит в себе функции для работы с длинными натуральными чи
 #include "longNat.h"
 #include "helpFunctions.h"
 
-int COM_NN_D(LNGNT pervoe, LNGNT vtoroe);
 /*
 COM_NN_D
 
@@ -28,8 +27,8 @@ COM_NN_D
 
 Функция возвращает результат типа - int
 */
+int COM_NN_D(LNGNT pervoe, LNGNT vtoroe);
 
-int NZER_N_B(LNGNT a);
 /*
 NZER_N_B
 
@@ -43,8 +42,8 @@ NZER_N_B
 
 Функция возвращает результат типа - int
 */
+int NZER_N_B(LNGNT a);
 
-LNGNT ADD_1N_N(LNGNT number);
 /*
 ADD_1N_N
 
@@ -57,8 +56,8 @@ ADD_1N_N
 
 Фукнция возвращает результат типа - LNGNT
 */
+LNGNT ADD_1N_N(LNGNT number);
 
-LNGNT ADD_NN_N(LNGNT first, LNGNT second);
 /*
 ADD_NN_N
 
@@ -72,8 +71,8 @@ ADD_NN_N
 
 Функция возвращает результат типа - LNGNT
 */
+LNGNT ADD_NN_N(LNGNT first, LNGNT second);
 
-LNGNT SUB_NN_N(LNGNT x, LNGNT y);
 /*
 ADD_1N_N
 
@@ -87,9 +86,8 @@ ADD_1N_N
 
 Функция возфращает тип LNGNT
 */
+LNGNT SUB_NN_N(LNGNT x, LNGNT y);
 
-
-LNGNT MUL_ND_N(LNGNT numb, int D);
 /*
 MUL_ND_N
 
@@ -103,8 +101,8 @@ MUL_ND_N
 
 Возвращаемый тип - LNGNT
 */
+LNGNT MUL_ND_N(LNGNT numb, int D);
 
-LNGNT MUL_Nk_N(LNGNT str, int k);
 /*
 MUL_Nk_N
 
@@ -119,8 +117,8 @@ MUL_Nk_N
 
 Функция возращает тип - LNGNT
 */
+LNGNT MUL_Nk_N(LNGNT str, int k);
 
-LNGNT MUL_NN_N(LNGNT First, LNGNT Second);
 /*
 MUL_NN_N
 
@@ -134,8 +132,8 @@ MUL_NN_N
 
 Функция возращает тип - LNGNT
 */
+LNGNT MUL_NN_N(LNGNT First, LNGNT Second);
 
-LNGNT SUB_NDN_N(LNGNT fNumb, LNGNT sNumb, int k);
 /*
 *************************************
 * Функцию разрабатывал:             *
@@ -154,8 +152,8 @@ SUB_NDN_N
 
 Функция возращает тип - LNGNT
 */
+LNGNT SUB_NDN_N(LNGNT fNumb, LNGNT sNumb, int k);
 
-LNGNT DIV_NN_Dk(LNGNT pervoe, LNGNT vtoroe);
 /*
 DIV_NN_Dk
 
@@ -168,10 +166,9 @@ DIV_NN_Dk
 2) vtoroe - Второе число
 
 Функция возращает тип - LNGNT
-
 */
+LNGNT DIV_NN_Dk(LNGNT pervoe, LNGNT vtoroe);
 
-LNGNT DIV_NN_N(LNGNT a, LNGNT b);
 /*
 DIV_NN_N
 
@@ -185,9 +182,8 @@ DIV_NN_N
 
 Функция возвращает результат типа - LNGNT
 */
+LNGNT DIV_NN_N(LNGNT a, LNGNT b);
 
-
-LNGNT MOD_NN_N(LNGNT a, LNGNT b);
 /*
 MOD_NN_N
 
@@ -205,8 +201,8 @@ MOD_NN_N
 
 Функция возращает тип - LNGNT
 */
+LNGNT MOD_NN_N(LNGNT a, LNGNT b);
 
-LNGNT GCF_NN_N(LNGNT x, LNGNT y);
 /*
 GCF_NN_N
 
@@ -220,8 +216,8 @@ GCF_NN_N
 
 Функция возращает тип - LNGNT
 */
+LNGNT GCF_NN_N(LNGNT x, LNGNT y);
 
-LNGNT LCM_NN_N(LNGNT firstNum, LNGNT secondNum);
 /*
 LCM_NN_N
 
@@ -235,5 +231,6 @@ LCM_NN_N
 
 Функция возращает тип - LNGNT
 */
+LNGNT LCM_NN_N(LNGNT firstNum, LNGNT secondNum);
 #endif
 

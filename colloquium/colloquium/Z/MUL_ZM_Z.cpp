@@ -1,10 +1,11 @@
 #include <cstdio>
 #include "longInteger.h"
-#include "MUL_ZM_Z.h"
+#include "../Z/longIntFunctions.h"
 
-void multiMinusOne(LNGINT* number){
-    if(number->A)
-        number->sign = !number->sign;
+LNGINT MUL_ZM_Z(LNGINT number){
+    if(number.A)
+        number.sign = !number.sign;
     else
         printf("\nОшибка, число не существует!\n");
+	return number;
 }

@@ -5,7 +5,7 @@
 struct LNGINT
 {
 	int sign;      // Знак числа
-	int n;		// Чисел в числе
+	int n;		// Цифр в числе
 	int* A;		// Число
 };
 

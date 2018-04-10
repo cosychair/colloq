@@ -147,17 +147,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Input\inputN.h" />
+    <ClInclude Include="Input\inputZ.h" />
     <ClInclude Include="N\helpFunctions.h" />
     <ClInclude Include="N\longNat.h" />
     <ClInclude Include="N\longNatFunctions.h" />
     <ClInclude Include="Output\outputCom.h" />
     <ClInclude Include="Output\outputN.h" />
+    <ClInclude Include="Output\outputZ.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Z\longInteger.h" />
+    <ClInclude Include="Z\longIntFunctions.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="colloquium.cpp" />
     <ClCompile Include="Input\inputN.cpp" />
+    <ClCompile Include="Input\inputZ.cpp" />
     <ClCompile Include="N\ADD_1N_N.cpp" />
     <ClCompile Include="N\ADD_NN_N.cpp" />
     <ClCompile Include="N\COM_NN_D.cpp" />
@@ -175,12 +180,23 @@
     <ClCompile Include="N\_NZER_N_B.cpp" />
     <ClCompile Include="Output\outputCom.cpp" />
     <ClCompile Include="Output\outputN.cpp" />
+    <ClCompile Include="Output\outputZ.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Z\ABS_Z_N.cpp" />
+    <ClCompile Include="Z\ADD_ZZ_Z.cpp" />
+    <ClCompile Include="Z\DIV_ZZ_Z.cpp" />
+    <ClCompile Include="Z\MOD_ZZ_Z.cpp" />
+    <ClCompile Include="Z\MUL_ZM_Z.cpp" />
+    <ClCompile Include="Z\MUL_ZZ_Z.cpp" />
+    <ClCompile Include="Z\POZ_Z_D.cpp" />
+    <ClCompile Include="Z\SUB_ZZ_Z.cpp" />
+    <ClCompile Include="Z\TRANS_N_Z.cpp" />
+    <ClCompile Include="Z\TRANS_Z_N.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -17,7 +17,7 @@ LNGNT DIV_NN_Dk(LNGNT pervoe,LNGNT vtoroe)
         a.A = (int*) malloc(a.n*sizeof(int));
         for(int i = 0; i<a.n;++i)
             *(a.A+i) = *(pervoe.A+i);
-        comp = COM_NN_D(a,vtoroe);
+        comp = COM_NN_D(pervoe,vtoroe);
         error = comp == -1;
         if(comp == 1)
         {

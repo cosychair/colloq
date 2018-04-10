@@ -3,7 +3,6 @@
 #define OUTN_H
 #include "..//N/longNat.h"
 
-void printN(LNGNT a);
 /*
 printN
 
@@ -14,8 +13,8 @@ printN
 
 Ничего не возвращает
 */
+void printN(LNGNT a);
 
-void freeN(LNGNT* a);
 /*
 freeN
 
@@ -26,8 +25,8 @@ freeN
 
 Ничего не возвращает
 */
+void freeN(LNGNT* a);
 
-void printMenuN();
 /*
 printMenuN
 
@@ -35,6 +34,7 @@ printMenuN
 
 Ничего не возвращает
 */
+void printMenuN();
 
 
 #endif
