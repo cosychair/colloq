@@ -20,6 +20,7 @@ void freeN(LNGNT* a)
 }
 
 void printMenuN() {
+	system("cls");
 	cout << "\n*********MENU FUNCTIONS FOR NATURAL NUMBERS**********" << endl;
 	cout << "Please choose the function you want from the list below." << endl;
 	cout << "1 - COM_NN_D" << endl;

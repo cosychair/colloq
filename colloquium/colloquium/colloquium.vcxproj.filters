@@ -90,6 +90,18 @@
     <ClInclude Include="Input\inputZ.h">
       <Filter>Файлы заголовков\InputH</Filter>
     </ClInclude>
+    <ClInclude Include="Q\longFracFunctions.h">
+      <Filter>Файлы заголовков\QH</Filter>
+    </ClInclude>
+    <ClInclude Include="Q\longFraction.h">
+      <Filter>Файлы заголовков\QH</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\inputQ.h">
+      <Filter>Файлы заголовков\InputH</Filter>
+    </ClInclude>
+    <ClInclude Include="Output\outputQ.h">
+      <Filter>Файлы заголовков\OutputH</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -187,6 +199,36 @@
     </ClCompile>
     <ClCompile Include="Input\inputZ.cpp">
       <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Q\RED_Q_Q.cpp">
+      <Filter>Исходные файлы\Q</Filter>
+    </ClCompile>
+    <ClCompile Include="Q\INT_Q_B.cpp">
+      <Filter>Исходные файлы\Q</Filter>
+    </ClCompile>
+    <ClCompile Include="Q\TRANS_Z_Q.cpp">
+      <Filter>Исходные файлы\Q</Filter>
+    </ClCompile>
+    <ClCompile Include="Q\TRANS_Q_Z.cpp">
+      <Filter>Исходные файлы\Q</Filter>
+    </ClCompile>
+    <ClCompile Include="Q\ADD_QQ_Q.cpp">
+      <Filter>Исходные файлы\Q</Filter>
+    </ClCompile>
+    <ClCompile Include="Q\SUB_QQ_Q.cpp">
+      <Filter>Исходные файлы\Q</Filter>
+    </ClCompile>
+    <ClCompile Include="Q\MUL_QQ_Q.cpp">
+      <Filter>Исходные файлы\Q</Filter>
+    </ClCompile>
+    <ClCompile Include="Q\DIV_QQ_Q.cpp">
+      <Filter>Исходные файлы\Q</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\inputQ.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Output\outputQ.cpp">
+      <Filter>Исходные файлы\Output</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

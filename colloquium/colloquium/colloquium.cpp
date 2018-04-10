@@ -2,17 +2,22 @@
 #include <iomanip>
 #include "../colloquium/N/longNat.h"
 #include "../colloquium/N/longNatFunctions.h"
-#include "../colloquium/Output/outputN.h"
-#include "../colloquium/Output/outputCom.h"
-#include "../colloquium/Input/inputN.h"
 #include "../colloquium/Z/longInteger.h"
 #include "../colloquium/Z/longIntFunctions.h"
+#include "../colloquium/Q/longFraction.h"
+#include "../colloquium/Q/longFracFunctions.h"
 #include "../colloquium/Input/inputZ.h"
+#include "../colloquium/Input/inputN.h"
+#include "../colloquium/Input/inputQ.h"
 #include "../colloquium/Output/outputZ.h"
+#include "../colloquium/Output/outputN.h"
+#include "../colloquium/Output/outputQ.h"
+#include "../colloquium/Output/outputCom.h"
 using namespace std;
 
-int chooseFunctionN();
-int chooseFunctionZ();
+int chooseFunctionN();//Выбор функций для натуральных чисел
+int chooseFunctionZ();//Выбор функций для целых чисел
+int chooseFunctionQ();//Выбор функций для дробей
 
 int main()
 {
@@ -22,18 +27,21 @@ int main()
 		cin >> type;
 		switch (type) {
 		case 'N':
-			system("cls");
-			printMenuN(); 
+			printMenuN();
 			chooseFunctionN();
 			break;
 		case 'Z':
-			system("cls");
 			printMenuZ();
 			chooseFunctionZ();
-			break; 
-		case 'Q': break;
+			break;
+		case 'Q': 
+			printMenuQ();
+			chooseFunctionQ();
+			break;
 		case 'P': break;
-		default: printError(); type = 'd'; break;
+		default:
+			printError(); type = 'd';
+			if (type == 0) continue; break;
 		}
 	} while (type == 'd');
 	return 0;
@@ -241,5 +249,73 @@ int chooseFunctionZ() {
 	} while (number == 0);
 	freeZ(&a);
 	freeZ(&b);
+	return number;
+}
+
+int chooseFunctionQ() {
+	FRCT a, b;
+	LNGINT z;
+	a.den.A = a.num.A = b.den.A = b.num.A = NULL;
+	int number = 0;
+	do {
+		cin >> number;
+		system("cls");
+		switch (number) {
+		case 1:
+			printFR();
+			a = readQ();
+			printQ(RED_Q_Q(a));
+			break;
+		case 2:
+			printFR();
+			a = readQ();
+			if (INT_Q_B(a) == 1)
+				cout << "This isn`t a fraction." << endl;
+			else 
+				cout << "This is a fraction." << endl;
+			break;
+		case 3:
+			printIN();
+			z = readZ();
+			printQ(TRANS_Z_Q(z));
+			break;
+		case 4:
+			printFR();
+			a = readQ();
+			printZ(TRANS_Q_Z(a));
+			break;
+		case 5:
+			printFR();
+			a = readQ(); 
+			printFR();
+			b = readQ();
+			printQ(ADD_QQ_Q(a,b));
+			break;
+		case 6:
+			printFR();
+			a = readQ();
+			printFR();
+			b = readQ();
+			printQ(SUB_QQ_Q(a, b));
+			break;
+		case 7:
+			printFR();
+			a = readQ();
+			printFR();
+			b = readQ();
+			printQ(MUL_QQ_Q(a, b));
+			break;
+		case 8:
+			printFR();
+			a = readQ();
+			printFR();
+			b = readQ();
+			printQ(DIV_QQ_Q(a, b));
+			break;
+		default: printError(); number = 0; break;
+		}
+	} while (number == 0);
+	freeQ(&a);
+	freeQ(&b);
 	return number;
 }

@@ -147,13 +147,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Input\inputN.h" />
+    <ClInclude Include="Input\inputQ.h" />
     <ClInclude Include="Input\inputZ.h" />
     <ClInclude Include="N\helpFunctions.h" />
     <ClInclude Include="N\longNat.h" />
     <ClInclude Include="N\longNatFunctions.h" />
     <ClInclude Include="Output\outputCom.h" />
     <ClInclude Include="Output\outputN.h" />
+    <ClInclude Include="Output\outputQ.h" />
     <ClInclude Include="Output\outputZ.h" />
+    <ClInclude Include="Q\longFracFunctions.h" />
+    <ClInclude Include="Q\longFraction.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Z\longInteger.h" />
@@ -162,6 +166,7 @@
   <ItemGroup>
     <ClCompile Include="colloquium.cpp" />
     <ClCompile Include="Input\inputN.cpp" />
+    <ClCompile Include="Input\inputQ.cpp" />
     <ClCompile Include="Input\inputZ.cpp" />
     <ClCompile Include="N\ADD_1N_N.cpp" />
     <ClCompile Include="N\ADD_NN_N.cpp" />
@@ -180,7 +185,16 @@
     <ClCompile Include="N\_NZER_N_B.cpp" />
     <ClCompile Include="Output\outputCom.cpp" />
     <ClCompile Include="Output\outputN.cpp" />
+    <ClCompile Include="Output\outputQ.cpp" />
     <ClCompile Include="Output\outputZ.cpp" />
+    <ClCompile Include="Q\ADD_QQ_Q.cpp" />
+    <ClCompile Include="Q\DIV_QQ_Q.cpp" />
+    <ClCompile Include="Q\INT_Q_B.cpp" />
+    <ClCompile Include="Q\MUL_QQ_Q.cpp" />
+    <ClCompile Include="Q\RED_Q_Q.cpp" />
+    <ClCompile Include="Q\SUB_QQ_Q.cpp" />
+    <ClCompile Include="Q\TRANS_Q_Z.cpp" />
+    <ClCompile Include="Q\TRANS_Z_Q.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

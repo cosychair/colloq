@@ -20,6 +20,7 @@ void freeZ(LNGINT* a) {
 }
 
 void printMenuZ() {
+	system("cls");
 	cout << "\n*********MENU FUNCTIONS FOR INTEGER NUMBERS**********" << endl;
 	cout << "Please choose the function you want from the list below." << endl;
 	cout << "1 - ABS_Z_N" << endl;

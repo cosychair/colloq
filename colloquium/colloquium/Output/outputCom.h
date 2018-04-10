@@ -9,4 +9,6 @@ void printError();
 
 void printIN();
 
+void printFR();
+
 #endif

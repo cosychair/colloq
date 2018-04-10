@@ -26,3 +26,9 @@ void printError() {
 void printIN() {
 	cout << "Please print the number." << endl;
 }
+
+void printFR() {
+	cout << "Please print the fraction." << endl;
+	cout << "Example: 1/2" << endl;
+	cout << "Please notice there aren`t any spaces!" << endl;
+}

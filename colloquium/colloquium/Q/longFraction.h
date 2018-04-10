@@ -1,7 +1,7 @@
 #ifndef FRACT_H
 #define FRACT_H
-#include "longNat.h"
-#include "longInteger.h"
+#include "../N/longNat.h"
+#include "../Z/longInteger.h"
 
 struct FRCT
 {
