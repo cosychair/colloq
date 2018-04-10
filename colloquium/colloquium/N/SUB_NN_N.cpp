@@ -14,17 +14,15 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 	while (i != y.n)
 	{
 		LNGNT k;
-		if (y > x)
-			k = x;
-		x = y;
-		y = k;
-		else;
-		z[i] = x[i] - y[i];
+		if (COM_NN_D(x, y) == 1)
+			swapN(&x,&y);
+
+		z[i] = x.A[i] - y.A[i];
 		if (t)
 			--z[i];
 		else;
 		t = false;
-		if (x[i] < 0)
+		if (x.A[i] < 0)
 		{
 			t = true;
 			z[i] += 10;
@@ -34,12 +32,12 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 
 	while (i != x.n)
 	{
-		z[i] = x[i];
+		z[i] = x.A[i];
 		if (t)
 			--z[i];
 		else;
 		t = false;
-		if (x[i] < 0)
+		if (x.A[i] < 0)
 		{
 			t = true;
 			z[i] += 10;
@@ -54,15 +52,15 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 	}
 	if (i == -1)
 	{
-		sub.a = NULL;
+		sub.A = NULL;
 		sub.n = 0;
 	}
 	else
 	{
 		sub.n = i + 1;
-		sub.a = new int[sub.n];
+		sub.A = new int[sub.n];
 		for (i = 0; i < sub.n; i++)
-			sub.a[i] = z[i];
+			sub.A[i] = z[i];
 	}
 	return(sub);
 }
