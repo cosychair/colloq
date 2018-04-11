@@ -26,6 +26,7 @@ LNGINT DIV_ZZ_Z(LNGINT divident, LNGINT divider)
 			ans = TRANS_N_Z(a);
 			if (divident.sign == 1 && k.A[0] != 0) ans = ADD_ZZ_Z(ans, ed);
 			ans.sign = (!divider.sign && divident.sign) || (!divident.sign && divider.sign);
+			return ans;
 		}
 		else
 			err = 1;
