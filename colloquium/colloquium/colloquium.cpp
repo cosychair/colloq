@@ -188,9 +188,10 @@ int chooseFunctionZ() {
 		case 2:
 			printIN();
 			a = readZ();
+			printZ(a);
 			switch(POZ_Z_D(a))
 			{
-			case 0: cout << "This number izn`t zero." << endl; break;
+			case 0: cout << "This number iz zero." << endl; break;
 			case 1: cout << "This number is negative." << endl; break;
 			case 2: cout << "This number is positive." << endl; break;
 			default: printError(); break;
@@ -249,6 +250,8 @@ int chooseFunctionZ() {
 		default: printError(); number = 0; break;
 		}
 	} while (number == 0);
+	cin.get();
+	cin.get();
 	freeZ(&a);
 	freeZ(&b);
 	return number;
@@ -316,6 +319,8 @@ int chooseFunctionQ() {
 		default: printError(); number = 0; break;
 		}
 	} while (number == 0);
+	cin.get();
+	cin.get();
 	freeQ(&a);
 	freeQ(&b);
 	return number;
