@@ -12,7 +12,6 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 	LNGNT sub;
 	int l = 0;
 	bool t = false;
-	LNGNT k;
 	if (COM_NN_D(x, y) == 1)
 		swapN(&x, &y);
 	else;
@@ -62,6 +61,7 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 	}
 	else
 	{
+
 		sub.n = x.n - i;
 		sub.A = new int[sub.n];
 		for (i; i < x.n; i++)
