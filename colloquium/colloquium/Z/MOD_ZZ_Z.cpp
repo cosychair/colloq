@@ -19,7 +19,9 @@ LNGINT MOD_ZZ_Z(LNGINT delimoe, LNGINT delitel)
 		juk.sign = 0;
 		ans = SUB_ZZ_Z(delimoe, MUL_ZZ_Z(delitel, juk));
 		ans.sign = sign;*/
-		ans = SUB_ZZ_Z(delimoe, MUL_ZZ_Z(delitel, DIV_ZZ_Z(delimoe, delitel)));
+		if (delimoe.A[0] != 0)	ans = SUB_ZZ_Z(delimoe, MUL_ZZ_Z(delitel, DIV_ZZ_Z(delimoe, delitel)));
+		else
+			ans = delimoe;
 	}
 	else
 		printf("\nОшибка - число не существует!\n");
