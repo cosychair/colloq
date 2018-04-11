@@ -7,7 +7,7 @@ using namespace std;
 
 void printQ(FRCT a) {
 	printZ(a.num);
-	cout << " / ";
+	cout << "/";
 	printN(a.den);
 	cout << endl;
 }

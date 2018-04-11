@@ -34,7 +34,7 @@ LNGNT readN() {
 				a.n++;
 			}
 		}
-		if (k == '/')break;
+		if (k == 'x')break;
 	} while (err || k != '\n');
 	return a;
 }

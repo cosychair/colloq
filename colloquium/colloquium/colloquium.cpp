@@ -20,6 +20,7 @@ using namespace std;
 int chooseFunctionN();//Выбор функций для натуральных чисел
 int chooseFunctionZ();//Выбор функций для целых чисел
 int chooseFunctionQ();//Выбор функций для дробей
+int chooseFunctionP();//Выбор функций для многочленов
 
 int main()
 {

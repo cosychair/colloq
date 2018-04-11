@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Input\inputN.h" />
+    <ClInclude Include="Input\inputP.h" />
     <ClInclude Include="Input\inputQ.h" />
     <ClInclude Include="Input\inputZ.h" />
     <ClInclude Include="N\helpFunctions.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="N\longNatFunctions.h" />
     <ClInclude Include="Output\outputCom.h" />
     <ClInclude Include="Output\outputN.h" />
+    <ClInclude Include="Output\outputP.h" />
     <ClInclude Include="Output\outputQ.h" />
     <ClInclude Include="Output\outputZ.h" />
     <ClInclude Include="P\longPoly.h" />
@@ -168,6 +170,7 @@
   <ItemGroup>
     <ClCompile Include="colloquium.cpp" />
     <ClCompile Include="Input\inputN.cpp" />
+    <ClCompile Include="Input\inputP.cpp" />
     <ClCompile Include="Input\inputQ.cpp" />
     <ClCompile Include="Input\inputZ.cpp" />
     <ClCompile Include="N\ADD_1N_N.cpp" />
@@ -187,6 +190,7 @@
     <ClCompile Include="N\_NZER_N_B.cpp" />
     <ClCompile Include="Output\outputCom.cpp" />
     <ClCompile Include="Output\outputN.cpp" />
+    <ClCompile Include="Output\outputP.cpp" />
     <ClCompile Include="Output\outputQ.cpp" />
     <ClCompile Include="Output\outputZ.cpp" />
     <ClCompile Include="P\ADD_PP_P.cpp" />

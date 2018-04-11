@@ -108,6 +108,12 @@
     <ClInclude Include="P\longPoly.h">
       <Filter>Файлы заголовков\PH</Filter>
     </ClInclude>
+    <ClInclude Include="Output\outputP.h">
+      <Filter>Файлы заголовков\OutputH</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\inputP.h">
+      <Filter>Файлы заголовков\InputH</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -274,6 +280,12 @@
     </ClCompile>
     <ClCompile Include="P\DER_P_P.cpp">
       <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Output\outputP.cpp">
+      <Filter>Исходные файлы\Output</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\inputP.cpp">
+      <Filter>Исходные файлы\Input</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
