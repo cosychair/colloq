@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <iostream>
 #include "longNat.h"
 #include "longNatFunctions.h"
 #include "helpFunctions.h"
-
+#include "../Output/outputN.h"
+using namespace std;
 LNGNT GCF_NN_N(LNGNT x, LNGNT y)
 {
     LNGNT s;
@@ -11,29 +13,22 @@ LNGNT GCF_NN_N(LNGNT x, LNGNT y)
     {
         LNGNT k;
     
-        if(x.A && y.A)
-    	{
-    		k = x;
-    		x = y;
-    		y = k;
-		}
+		if (COM_NN_D(x, y) == 1)
+			swapN(&x, &y);
         else;
         int l = 0;
+		int comp;
         do
         {
             x = MOD_NN_N(x, y);
-            int comp = COM_NN_D(x, y);
+            comp = COM_NN_D(x, y);
 			l = NZER_N_B(x) && NZER_N_B(y);
             if(comp == 1)
-            {
-	    		k = x;
-	    		x = y;
-	    		y = k;
-			}
+				swapN(&x, &y);
 			else;
         }
         while (l);
-        s = x;
+        s = x;	
     }
     else
         error = 1;

@@ -5,8 +5,13 @@
 #include "longNatFunctions.h"
 #include "helpFunctions.h"
 
+
+#include "../Output/outputN.h"
+
+using namespace std;
 LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 {
+
 	int i = y.n - 1;
 	int *z = new int[x.n];
 	LNGNT sub;
@@ -30,7 +35,7 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 		else;
 		--i;
 	}
-
+	
 	i = x.n - y.n - 1;
 	while (i != -1)
 	{
@@ -39,7 +44,7 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 			--z[i];
 		else;
 		t = false;
-		if (x.A[i] < 0)
+		if (z[i] < 0)
 		{
 			t = true;
 			z[i] += 10;
@@ -48,9 +53,9 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 		i--;
 	}
 	i++;
-
 	while (i != x.n && z[i] == 0)
 	{
+
 		i++;
 	}
 	if (i == -1)
@@ -61,14 +66,14 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 	}
 	else
 	{
-
+		
 		sub.n = x.n - i;
 		sub.A = new int[sub.n];
 		for (i; i < x.n; i++)
 		{
-			sub.A[i] = z[i];
+			sub.A[sub.n - (x.n - i)] = z[i];
 		}
 	};
-
+	
 	return(sub);
 }
