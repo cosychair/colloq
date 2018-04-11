@@ -7,6 +7,8 @@
 LNGINT TRANS_Q_Z(FRCT drob)
 {
     LNGINT result;
+	result.A = NULL;
+	drob = RED_Q_Q(drob);
     if(drob.num.A && drob.den.A)
     {
         if(drob.den.n == 1 && *(drob.den.A) == 1)
@@ -16,12 +18,11 @@ LNGINT TRANS_Q_Z(FRCT drob)
             result.A = (int*) malloc(result.n*sizeof(int));
             for (int i = 0; i < result.n; ++i)
                 result.A[i] = drob.num.A[i];
-        }
+		}
         else
             printf("\nЗнаменатель не равен 1\n");
     }
     else
         printf("\nЧисла(-ел) не существует\n");
-
-    return result;
+	return result;
 }
