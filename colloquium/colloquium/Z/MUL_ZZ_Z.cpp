@@ -26,6 +26,12 @@ LNGINT MUL_ZZ_Z(LNGINT ln, LNGINT lt)
                             *(ttr.A + i) = *(lx.A+i);
                         if(ln.sign != lt.sign)
 							ttr = MUL_ZM_Z(ttr); 
+						if (ttr.A[0] == 0 )
+						{
+							ttr.n = 1;
+							ttr.sign = 0;
+						}
+						else;
                     }
                 else
                     error = 1;
