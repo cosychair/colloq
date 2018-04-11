@@ -12,7 +12,9 @@ LNGINT readZ() {
 	int* tmp;
 	int err = 0;
 	scanf_s("%c", &k);
-	if (k == 1)
+	if((k>'9'||k<'0')&&k!='-')scanf_s("%c", &k);
+
+	if (k == '-')
 		a.sign = 1;
 	else {
 		a.sign = 0;
@@ -42,7 +44,7 @@ LNGINT readZ() {
 				a.n++;
 			}
 		}
-		if (k = '/') break;
+		if (k == '/') break;
 	} while (err || k != '\n');
 	return a;
 }

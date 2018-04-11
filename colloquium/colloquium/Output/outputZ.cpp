@@ -4,7 +4,7 @@
 using namespace std;
 
 void printZ(LNGINT a) {
-	cout << (a.sign == 1) ? "-" : "";
+	cout << ((a.sign == 1) ? "-" : "");
 	if (a.A != NULL&&a.n != 0)
 		for (int i = 0; i < a.n; ++i)
 			cout << *(a.A + i);
