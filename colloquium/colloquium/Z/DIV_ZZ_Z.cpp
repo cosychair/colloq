@@ -20,11 +20,11 @@ LNGINT DIV_ZZ_Z(LNGINT divident, LNGINT divider)
 		a = ABS_Z_N(divident);
 		b = ABS_Z_N(divider);
 		k = MOD_NN_N(a, b);
-		if (COM_NN_D(a, b) == 1)swapN(&a, &b);
+		if (a.A[0]!=0&&COM_NN_D(a, b) == 1)swapN(&a, &b);
 		a = DIV_NN_N(a, b);
 		ans = TRANS_N_Z(a);
 		if (divident.sign == 1&&k.A[0]!=0) ans = ADD_ZZ_Z(ans,ed);
-		ans.sign = (!divider.sign && divident.sign) || (!divident.sign && divider.sign);
+		if (a.A[0] != 0)ans.sign = (!divider.sign && divident.sign) || (!divident.sign && divider.sign);
 	}
 	else
 		err = 1;
