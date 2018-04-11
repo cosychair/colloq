@@ -15,7 +15,7 @@ LNGNT ABS_Z_N(LNGINT numb)
                     *(answer.A+i) = *(numb.A+i);
             }
         else
-            printf("\nОшибка, числа не существует!\n");
+            printf("\nОшибка, числo не существует!\n");
         return answer;
 }
 
