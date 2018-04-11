@@ -102,6 +102,12 @@
     <ClInclude Include="Output\outputQ.h">
       <Filter>Файлы заголовков\OutputH</Filter>
     </ClInclude>
+    <ClInclude Include="P\longPolyFunctions.h">
+      <Filter>Файлы заголовков\PH</Filter>
+    </ClInclude>
+    <ClInclude Include="P\longPoly.h">
+      <Filter>Файлы заголовков\PH</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -229,6 +235,45 @@
     </ClCompile>
     <ClCompile Include="Output\outputQ.cpp">
       <Filter>Исходные файлы\Output</Filter>
+    </ClCompile>
+    <ClCompile Include="P\MOD_PP_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\DEG_P_N.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\GCF_PP_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\DIV_PP_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\MUL_PP_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\FAC_P_Q.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\NMR_P_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\LED_P_Q.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\MUL_Pxk_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\MUL_PQ_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\ADD_PP_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\SUB_PP_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
+    </ClCompile>
+    <ClCompile Include="P\DER_P_P.cpp">
+      <Filter>Исходные файлы\P</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

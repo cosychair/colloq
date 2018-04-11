@@ -6,6 +6,8 @@
 #include "../colloquium/Z/longIntFunctions.h"
 #include "../colloquium/Q/longFraction.h"
 #include "../colloquium/Q/longFracFunctions.h"
+#include "../colloquium/P/longPoly.h"
+#include "../colloquium/P/longPolyFunctions.h"
 #include "../colloquium/Input/inputZ.h"
 #include "../colloquium/Input/inputN.h"
 #include "../colloquium/Input/inputQ.h"
