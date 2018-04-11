@@ -1,6 +1,6 @@
 #ifndef PLNM_H
 #define PLNM_H
-#include "longFraction.h"
+#include "../Q/longFraction.h"
 
 struct PLNM
 {

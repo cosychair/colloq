@@ -1,14 +1,25 @@
 #include <cstdio>
 #include <cstdlib>
-#include "MUL_Pxk_P.h"
+#include "longPoly.h"
+#include "../Q/longFracFunctions.h"
+#include "longPolyFunctions.h"
 
-void multiplicationXkP(PLNM* polynom, int degree){
+
+PLNM MUL_Pxk_P(PLNM polynom, int degree){
     if(degree >= 0){
-        polynom->C = (FRCT*)realloc(polynom->C, (polynom->deg+degree) * sizeof(FRCT));
-        for(int i = polynom->deg+1; i <= polynom->deg + degree; ++i)
-            polynom->C[i].num = 0, polynom->C[i].den = 1;
-        polynom->deg += degree; 
+        polynom.C = (FRCT*)realloc(polynom.C, (polynom.deg+degree) * sizeof(FRCT));
+        for(int i = polynom.deg+1; i <= polynom.deg + degree; ++i){
+            polynom.C[i].num.sign = 1;
+            polynom.C[i].num.n = 1;
+            polynom.C[i].num.A = new int[1]; 
+			polynom.C[i].num.A[0] = 0;
+            polynom.C[i].den.n = 1;
+            polynom.C[i].den.A = new int[1]; 
+			polynom.C[i].num.A[0] = 1;
+        }
+        polynom.deg += degree;
     }
     else
         printf("\nСтепень должна быть >= 0\n");
+	return polynom;
 }

@@ -14,7 +14,7 @@ FRCT ADD_QQ_Q(FRCT x, FRCT y)
     {
     	error = 0;
         LNGINT a, c;
-        LNGNT b, d, k, nok;// дроби вида a/b и c/d 
+        LNGNT b, d, nok;// дроби вида a/b и c/d 
         a = x.num;
         b = x.den;
         c = y.num;
