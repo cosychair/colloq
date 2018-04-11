@@ -5,6 +5,8 @@
 
 void greeting();
 
+void hint();
+
 void printError();
 
 void printIN();

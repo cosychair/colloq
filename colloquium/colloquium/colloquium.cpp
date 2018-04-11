@@ -24,6 +24,7 @@ int main()
 	greeting();
 	char type = 'd';//d from the dull user
 	do {
+		hint();
 		cin >> type;
 		switch (type) {
 		case 'N':
@@ -43,7 +44,8 @@ int main()
 			printError(); type = 'd';
 			if (type == 0) continue; break;
 		}
-	} while (type == 'd');
+		system("cls");
+	} while (type != 'E');
 	return 0;
 }
 
@@ -54,7 +56,6 @@ int chooseFunctionN() {
 	int number = 0;
 	do {
 		cin >> number;
-		system("cls");
 		switch (number) {
 		case 1: 
 			printIN();
@@ -164,6 +165,8 @@ int chooseFunctionN() {
 		default: printError(); number = 0; break;
 		}
 	} while (number == 0);
+	cin.get();
+	cin.get();
 	freeN(&a);
 	freeN(&b);
 	return number;
@@ -176,7 +179,6 @@ int chooseFunctionZ() {
 	int number = 0;
 	do {
 		cin >> number;
-		system("cls");
 		switch (number) {
 		case 1:
 			printIN();
@@ -259,7 +261,6 @@ int chooseFunctionQ() {
 	int number = 0;
 	do {
 		cin >> number;
-		system("cls");
 		switch (number) {
 		case 1:
 			printFR();
