@@ -19,13 +19,12 @@ FRCT ADD_QQ_Q(FRCT x, FRCT y)
         b = x.den;
         c = y.num;
         d = y.den; 
-        nok = LCM_NN_N(TRANS_Z_N(c), d);//Гриша тут нельзя скидывать параметр целого числа, тк функция для натурального
+        nok = LCM_NN_N(b, d);
         sum.den = nok;
-        k = b;
-        b = DIV_NN_N(nok, TRANS_Z_N(c));//Гриша тут нельзя скидывать параметр целого числа, тк функция для натурального
-        d = DIV_NN_N(nok, k);
-       	a = MUL_ZZ_Z(a, TRANS_N_Z(d));
-		c = MUL_ZZ_Z(c, TRANS_N_Z(b));
+        b = DIV_NN_N(nok, b);
+        d = DIV_NN_N(nok, d);
+       	a = MUL_ZZ_Z(a, TRANS_N_Z(b));
+		c = MUL_ZZ_Z(c, TRANS_N_Z(d));
 		sum.num = ADD_ZZ_Z(a, c);
     }
     else
