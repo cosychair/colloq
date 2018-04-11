@@ -58,7 +58,7 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 
 		i++;
 	}
-	if (i == -1)
+	if (i == x.n)
 	{
 		sub.A = new int[1];
 		sub.A[0] = 0;
