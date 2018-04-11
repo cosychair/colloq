@@ -15,6 +15,6 @@ FRCT DIV_QQ_Q(FRCT divident, FRCT divider){
     }
     else
         printf("\nОшибка, числа не существует!\n");
-    
+	ans = RED_Q_Q(ans);
     return ans;
 }

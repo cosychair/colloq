@@ -19,6 +19,7 @@ LNGINT MOD_ZZ_Z(LNGINT delimoe, LNGINT delitel)
 		juk.sign = 0;
 		ans = SUB_ZZ_Z(delimoe, MUL_ZZ_Z(delitel, juk));
 		ans.sign = sign;*/
+		if (COM_NN_D(TRANS_Z_N(delimoe), TRANS_Z_N(delitel)) == 1)return delimoe;
 		if (delimoe.A[0] != 0)	ans = SUB_ZZ_Z(delimoe, MUL_ZZ_Z(delitel, DIV_ZZ_Z(delimoe, delitel)));
 		else
 			ans = delimoe;

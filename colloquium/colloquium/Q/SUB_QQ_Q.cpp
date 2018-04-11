@@ -20,6 +20,6 @@ FRCT SUB_QQ_Q(FRCT divident, FRCT divider)
 	}
 	else
 		cout<<"\nОшибка, числа не существует!\n";
-		
+	ans = RED_Q_Q(ans);
 	return ans;
 }

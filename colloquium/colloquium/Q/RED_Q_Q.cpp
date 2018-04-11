@@ -27,6 +27,6 @@ FRCT RED_Q_Q(FRCT drob)
 	}
 	else
 		printf("\nОшибка - число не существует!\n");
-
+	//if (ans.num.A[0] == 0)ans.num.A[0] = 1;
 	return ans;
 }

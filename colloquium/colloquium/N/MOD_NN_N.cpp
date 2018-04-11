@@ -8,6 +8,7 @@
 LNGNT MOD_NN_N(LNGNT a, LNGNT b)
     {
         LNGNT ans;
+		if (COM_NN_D(a, b) == 1)swapN(&a,&b);
         int error = 0;
         if(a.A && b.A)
             {
