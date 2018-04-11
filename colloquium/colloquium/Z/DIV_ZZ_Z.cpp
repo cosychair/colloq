@@ -14,23 +14,26 @@ LNGINT DIV_ZZ_Z(LNGINT divident, LNGINT divider)
 	ed.A = (int*)malloc(sizeof(int));
 	ed.A[0] = 1;
 	int err = 0;
-	if (divident.A && divider.A)
-	{
-		LNGNT a, b, k;
-		a = ABS_Z_N(divident);
-		b = ABS_Z_N(divider);
-		k = MOD_NN_N(a, b);
-		if (a.A[0]!=0&&COM_NN_D(a, b) == 1)swapN(&a, &b);
-		a = DIV_NN_N(a, b);
-		ans = TRANS_N_Z(a);
-		if (divident.sign == 1&&k.A[0]!=0) ans = ADD_ZZ_Z(ans,ed);
-		if (a.A[0] != 0)ans.sign = (!divider.sign && divident.sign) || (!divident.sign && divider.sign);
+	if (divident.A[0] != 0) {
+		if (divident.A && divider.A)
+		{
+			LNGNT a, b, k;
+			a = ABS_Z_N(divident);
+			b = ABS_Z_N(divider);
+			k = MOD_NN_N(a, b);
+			if (COM_NN_D(a, b) == 1)swapN(&a, &b);
+			a = DIV_NN_N(a, b);
+			ans = TRANS_N_Z(a);
+			if (divident.sign == 1 && k.A[0] != 0) ans = ADD_ZZ_Z(ans, ed);
+			ans.sign = (!divider.sign && divident.sign) || (!divident.sign && divider.sign);
+		}
+		else
+			err = 1;
+
+		if (err)
+			std::cout << "Ошибка, число не существует!";
 	}
-	else
-		err = 1;
-
-	if (err)
-		std::cout << "Ошибка, число не существует!";
-
+	ed.A[0] = 0;
+	ans = ed;
 	return ans;
 }
