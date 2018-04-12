@@ -36,5 +36,5 @@ printMenuZ
 */
 void printMenuZ();
 
-
+void showInfoMenuZ(int number);
 #endif

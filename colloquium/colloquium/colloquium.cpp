@@ -14,8 +14,9 @@
 using namespace std;
 
 int chooseFunctionN(int number);
-int chooseFunctionZ();
+int chooseFunctionZ(int number);
 void infoN();
+void infoZ();
 
 int main()
 {
@@ -33,7 +34,7 @@ int main()
 		case 'Z':
 			system("cls");
 			printMenuZ();
-			chooseFunctionZ();
+			infoZ();
 			break; 
 		case 'Q': break;
 		case 'P': break;
@@ -165,13 +166,13 @@ int chooseFunctionN(int number) {
 	return number;
 }
 
-int chooseFunctionZ() {
+int chooseFunctionZ(int number) {
 	LNGINT a, b;
 	LNGNT n;
 	a.A = b.A = n.A = NULL;
-	int number = 0;
+	/*int number = 0;
 	do {
-		cin >> number;
+		cin >> number;*/
 		system("cls");
 		switch (number) {
 		case 1:
@@ -242,7 +243,7 @@ int chooseFunctionZ() {
 			break;
 		default: printError(); number = 0; break;
 		}
-	} while (number == 0);
+	//} while (number == 0);
 	freeZ(&a);
 	freeZ(&b);
 	return number;
@@ -271,5 +272,31 @@ void infoN()
 			st = st * 10;
 		}
 		chooseFunctionN(number);
+	}
+}
+
+void infoZ()
+{
+	string temp = "";
+	int i = 0, number = 0, st = 1;
+	cin >> temp;
+	i = temp.length();
+	if (temp[0] == 'i')
+	{
+		for (int j = i - 1; j != 3; --j)
+		{
+			number = number + (temp[j] - 48) * st;
+			st = st * 10;
+		}
+		showInfoMenuZ(number);
+	}
+	else
+	{
+		for (int j = i - 1; j != -1; --j)
+		{
+			number = number + ((int)temp[j] - 48) * st;
+			st = st * 10;
+		}
+		chooseFunctionZ(number);
 	}
 }
