@@ -147,6 +147,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Info\info.h" />
     <ClInclude Include="Input\inputN.h" />
     <ClInclude Include="Input\inputP.h" />
     <ClInclude Include="Input\inputQ.h" />
@@ -170,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="colloquium.cpp" />
+    <ClCompile Include="Info\info.cpp" />
     <ClCompile Include="Input\inputN.cpp" />
     <ClCompile Include="Input\inputP.cpp" />
     <ClCompile Include="Input\inputQ.cpp" />

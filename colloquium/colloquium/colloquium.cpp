@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
 #include "../colloquium/N/longNat.h"
 #include "../colloquium/N/longNatFunctions.h"
 #include "../colloquium/Z/longInteger.h"
@@ -17,10 +18,9 @@
 #include "../colloquium/Output/outputQ.h"
 #include "../colloquium/Output/outputP.h"
 #include "../colloquium/Output/outputCom.h"
+#include "../colloquium/Info/info.h"
 using namespace std;
 
-int chooseFunctionN();//Выбор функций для натуральных чисел
-int chooseFunctionZ();//Выбор функций для целых чисел
 int chooseFunctionQ();//Выбор функций для дробей
 int chooseFunctionP();//Выбор функций для многочленов
 
@@ -29,18 +29,19 @@ int main()
 	greeting();
 	char type = 'd';//d from the dull user
 	do {
-		hint();
 		cin >> type;
 		switch (type) {
 		case 'N':
+			system("cls");
 			printMenuN();
-			chooseFunctionN();
+			infoN();
 			break;
 		case 'Z':
+			system("cls");
 			printMenuZ();
-			chooseFunctionZ();
+			infoZ();
 			break;
-		case 'Q': 
+		case 'Q':
 			printMenuQ();
 			chooseFunctionQ();
 			break;
@@ -48,22 +49,17 @@ int main()
 			printMenuP();
 			chooseFunctionP();
 			break;
-		default:
-			printError(); type = 'd';
-			if (type == 0) continue; break;
+		default: printError(); type = 'd'; break;
 		}
-		system("cls");
-	} while (type != 'E');
+	} while (type == 'd');
+	system("pause");
 	return 0;
 }
-
-int chooseFunctionN() {
+/*
+int chooseFunctionN(int number) {
 	LNGNT a, b;
 	a.A = b.A = NULL;
 		int k;
-	int number = 0;
-	do {
-		cin >> number;
 		switch (number) {
 		case 1: 
 			printIN();
@@ -98,7 +94,7 @@ int chooseFunctionN() {
 			b = readN(); 
 			printN(ADD_NN_N(a,b));
 			break;
-		case 5://блеать не работает
+		case 5:
 			printIN();
 			a = readN();
 			printIN();
@@ -172,7 +168,6 @@ int chooseFunctionN() {
 			break;
 		default: printError(); number = 0; break;
 		}
-	} while (number == 0);
 	cin.get();
 	cin.get();
 	freeN(&a);
@@ -264,7 +259,7 @@ int chooseFunctionZ() {
 	freeZ(&b);
 	return number;
 }
-
+*/
 int chooseFunctionQ() {
 	FRCT a, b;
 	LNGINT z;
@@ -338,12 +333,15 @@ int chooseFunctionP() {
 	PLNM a,b;
 	FRCT q;
 	int d;
+	char c;
 	int number = 0;
 	do {
 		cin >> number;
 		switch (number) {
 		case 1:
 			printPLN();
+			 c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			a = readP();
 			printPLN();
 			b = readP();
@@ -352,6 +350,8 @@ int chooseFunctionP() {
 		case 2:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printPLN();
 			b = readP();
 			printP(SUB_PP_P(a, b)); 
@@ -359,12 +359,17 @@ int chooseFunctionP() {
 		case 3:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printFR();
 			q = readQ();
 			printP(MUL_PQ_P(a, q));
+			break;
 		case 4:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printIN();
 			cin >> d;
 			printP(MUL_Pxk_P(a,d));
@@ -372,21 +377,29 @@ int chooseFunctionP() {
 		case 5:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printQ(LED_P_Q(a));
 			break;
 		case 6:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			cout<<"\n"<<DEG_P_N(a)<<endl;
 			break;
 		case 7:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printP(FAC_P_Q(a));
 			break;
 		case 8:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printPLN();
 			b = readP();
 			printP(MUL_PP_P(a, b));
@@ -394,6 +407,8 @@ int chooseFunctionP() {
 		/*case 9:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printPLN();
 			b = readP();
 			printP(DIV_PP_P(a, b));
@@ -401,6 +416,8 @@ int chooseFunctionP() {
 		case 10:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printPLN();
 			b = readP();
 			printP(MOD_PP_P(a, b));
@@ -408,6 +425,8 @@ int chooseFunctionP() {
 		case 11:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printPLN();
 			b = readP();
 			printP(GCF_PP_P(a, b));
@@ -415,11 +434,15 @@ int chooseFunctionP() {
 		case 12:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printP(DER_P_P(a));
 			break;
 		/*case 13:
 			printPLN();
 			a = readP();
+			c = ' ';//fix print
+			while (std::cin.get(c) && c != '\n');
 			printP(NMR_P_P(a));
 			break;*/
 		default: printError(); number = 0; break;

@@ -1,6 +1,7 @@
 #include "../Output/outputZ.h"
 #include <iostream>
 #include <iomanip>
+#include "../Info/info.h"
 using namespace std;
 
 void printZ(LNGINT a) {
@@ -37,4 +38,22 @@ void printMenuZ() {
 	cout << "Example: 1" << endl;
 	cout << "If you need more information about functions print \"info\" and after it print number of the function you want." << endl;
 	cout << "Example: info1" << endl;
+}
+
+void showInfoMenuZ(int number)
+{
+	switch (number)
+	{
+	case 1: cout << "јбсолютна€ величина числа, результат - натуральное" << endl; break;
+	case 2: cout << "ќпределение положительности числа (2 - положительное, 0 Ч равное нулю, 1 - отрицательное)" << endl; break;
+	case 3: cout << "”множение целого на (-1)" << endl; break;
+	case 4: cout << "ѕреобразование натурального в целое" << endl; break;
+	case 5: cout << "ѕреобразование целого неотрицательного в натуральное" << endl; break;
+	case 6: cout << "—ложение целых чисел" << endl; break;
+	case 7: cout << "¬ычитание целых чисел" << endl; break;
+	case 8: cout << "”множение целых чисел" << endl; break;
+	case 9: cout << "„астное от делени€ большего целого числа на меньшее или равное натуральное с остатком (делитель отличен от нул€)" << endl; break;
+	case 10: cout << "ќстаток от делени€ большего целого числа на меньшее или равное натуральное с остатком (делитель отличен от нул€)" << endl; break;
+	default: cout << "Error! Wrong number. Please try again." << endl; infoZ(); break;
+	}
 }

@@ -7,7 +7,7 @@ using namespace std;
 void greeting() {
 	cout << "**********COMPUTER ALGEBRA SYSTEM**********" << endl;
 	cout << "This system affords you an opportunity of working with long numbers." << endl;
-	
+	hint();
 }
 
 void hint() {

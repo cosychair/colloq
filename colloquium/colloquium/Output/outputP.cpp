@@ -7,6 +7,7 @@ using namespace std;
 
 void printP(PLNM a) {
 	int i = 0, f=0;
+	if (a.deg == 0 && a.C[0].den.A[0] == 0)cout << "0"<<endl;
 	while (a.deg >= 0) {
 		if (a.C[i].num.A&&a.C[i].num.A[0] != 0) {
 			if (a.C[i].num.sign == 0&&f)cout << "+";

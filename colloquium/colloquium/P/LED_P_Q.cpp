@@ -5,5 +5,5 @@
 
 FRCT LED_P_Q(PLNM A)
 {
-    return A.C[A.deg - 1];
+    return A.C[0];
 }

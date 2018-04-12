@@ -49,6 +49,12 @@
     <Filter Include="Файлы заголовков\InputH">
       <UniqueIdentifier>{69192b59-2f58-45a1-a528-db62db0e2ba6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Info">
+      <UniqueIdentifier>{9c1e85fe-41f0-4517-9845-47e0dba752bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\InfoH">
+      <UniqueIdentifier>{2d278fc3-2b1a-45d0-b050-e2ca5b1ef5cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -113,6 +119,9 @@
     </ClInclude>
     <ClInclude Include="Input\inputP.h">
       <Filter>Файлы заголовков\InputH</Filter>
+    </ClInclude>
+    <ClInclude Include="Info\info.h">
+      <Filter>Файлы заголовков\InfoH</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -286,6 +295,9 @@
     </ClCompile>
     <ClCompile Include="Input\inputP.cpp">
       <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Info\info.cpp">
+      <Filter>Исходные файлы\Info</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@ PLNM MUL_Pxk_P(PLNM polynom, int degree){
 			polynom.C[i].num.A[0] = 0;
             polynom.C[i].den.n = 1;
             polynom.C[i].den.A = new int[1]; 
-			polynom.C[i].num.A[0] = 1;
+			polynom.C[i].den.A[0] = 1;
         }
         polynom.deg += degree;
     }
