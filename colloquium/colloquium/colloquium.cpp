@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
 #include "../colloquium/N/longNat.h"
 #include "../colloquium/N/longNatFunctions.h"
 #include "../colloquium/Output/outputN.h"
@@ -9,10 +10,12 @@
 #include "../colloquium/Z/longIntFunctions.h"
 #include "../colloquium/Input/inputZ.h"
 #include "../colloquium/Output/outputZ.h"
+#include "../colloquium/Output/outputN.h"
 using namespace std;
 
-int chooseFunctionN();
+int chooseFunctionN(int number);
 int chooseFunctionZ();
+void infoN();
 
 int main()
 {
@@ -24,7 +27,8 @@ int main()
 		case 'N':
 			system("cls");
 			printMenuN(); 
-			chooseFunctionN();
+			infoN();
+			//chooseFunctionN();
 			break;
 		case 'Z':
 			system("cls");
@@ -39,14 +43,14 @@ int main()
 	return 0;
 }
 
-int chooseFunctionN() {
+int chooseFunctionN(int number) {
 	LNGNT a, b;
 	a.A = b.A = NULL;
 		int k;
-	int number = 0;
+	/*int number = 0;
 	do {
-		cin >> number;
-		system("cls");
+		cin >> number;*/
+		system("cls"); 
 		switch (number) {
 		case 1: 
 			printIN();
@@ -155,7 +159,7 @@ int chooseFunctionN() {
 			break;
 		default: printError(); number = 0; break;
 		}
-	} while (number == 0);
+	/*} while (number == 0);*/
 	freeN(&a);
 	freeN(&b);
 	return number;
@@ -242,4 +246,30 @@ int chooseFunctionZ() {
 	freeZ(&a);
 	freeZ(&b);
 	return number;
+}
+
+void infoN()
+{
+	string temp = "";
+	int i = 0, number = 0, st = 1;
+	cin >> temp;
+	i = temp.length();
+	if (temp[0] == 'i')
+	{
+		for (int j = i - 1; j != 3; --j)
+		{
+			number = number + (temp[j] - 48) * st;
+			st = st * 10;
+		}
+		showInfoMenuN(number);
+	}
+	else
+	{
+		for (int j = i - 1; j != -1; --j)
+		{
+			number = number + ((int)temp[j] - 48) * st;
+			st = st * 10;
+		}
+		chooseFunctionN(number);
+	}
 }
