@@ -18,6 +18,7 @@ void printP(PLNM a) {
 		a.deg--;
 		i++;
 	}
+	cout << endl;
 }
 
 void freeP(PLNM* a) {

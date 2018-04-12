@@ -14,7 +14,7 @@ int NZER_N_B(LNGNT x)
 	}
 	else
 	{
-		printf("\nОшибка, числа не существует!\n");
+		printf("\nError, number doesn`t exist!\n");
 		ans = -1;
 	}
 

@@ -19,6 +19,6 @@ LNGNT MUL_NN_N(LNGNT First, LNGNT Second)
 		}
 	}
 	else
-		std::cout << "Ошибка, число не существует!";
+		std::cout << "Error, numer doesn`t exist!\n";
 	return ans;
 }

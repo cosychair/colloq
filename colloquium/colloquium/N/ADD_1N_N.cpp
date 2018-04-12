@@ -35,7 +35,7 @@ LNGNT ADD_1N_N(LNGNT numb)
                 ++*(answer.A+answer.n-1);
         }
     else
-        printf("Ошибка, числа не существует\n");
+        printf("Error, number doesn`t exist\n");
 
     return answer;
 

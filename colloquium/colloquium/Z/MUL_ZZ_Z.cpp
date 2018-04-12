@@ -40,7 +40,7 @@ LNGINT MUL_ZZ_Z(LNGINT ln, LNGINT lt)
             error = 1;
         
         if(error == 1)
-            cout << "Ошибка, числа не существует!" << endl;
+            cout << "Error, numer doesn`t exist!" << endl;
         
         return ttr;
     }

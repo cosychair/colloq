@@ -16,7 +16,7 @@ PLNM MUL_PQ_P(PLNM M, FRCT Q)
 			A.C[i] = MUL_QQ_Q(M.C[i], Q);
 	}
 	else
-		printf("Многочлена не существует \n");
+		printf("Polynomial doesn`t exist!\n");
 
 	return A;
 }

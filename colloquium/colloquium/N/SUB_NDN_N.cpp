@@ -24,7 +24,7 @@ LNGNT SUB_NDN_N(LNGNT fNumb, LNGNT sNumb, int k)
             error = 1;
             
         if(error)
-            printf("\nОшибка, число не существует!\n");
+            printf("\nError, numer doesn`t exist!\n");
             
         return answer;
 }

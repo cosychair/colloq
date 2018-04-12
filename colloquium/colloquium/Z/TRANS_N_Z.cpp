@@ -16,6 +16,6 @@ LNGINT TRANS_N_Z(LNGNT numb)
             outNumb.A[i] = numb.A[i];
     }
     else
-        printf("\nОшибка, число не существует!\n");
+        printf("\nError, numer doesn`t exist!\n");
     return outNumb;
 }

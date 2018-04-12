@@ -34,7 +34,7 @@ LNGNT GCF_NN_N(LNGNT x, LNGNT y)
         error = 1;
 
     if(error)
-        printf("\nОшибка, число не существует!\n");
+        printf("\nError, number doesn`t exist!\n");
 
     return s;
 }

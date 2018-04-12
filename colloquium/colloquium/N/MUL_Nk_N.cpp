@@ -6,7 +6,7 @@ using namespace std;
 
 LNGNT MUL_Nk_N(LNGNT str, int k)
 {
-	if (str.A != NULL)			// если был передан указатель на NULL - ошибка
+	if (str.A != NULL)
 	{
 		for (int i = str.n; i < str.n+k; i++)
 		{
@@ -16,6 +16,6 @@ LNGNT MUL_Nk_N(LNGNT str, int k)
 		str.n += k;
 	}
 	else
-		cout <<"Ошибка, заданно пустое значение!"<<endl;
+		cout <<"Error, numer doesn`t exist!!"<<endl;
 	return str;
 }

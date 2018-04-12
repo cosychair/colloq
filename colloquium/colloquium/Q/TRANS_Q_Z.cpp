@@ -20,9 +20,9 @@ LNGINT TRANS_Q_Z(FRCT drob)
                 result.A[i] = drob.num.A[i];
 		}
         else
-            printf("\nЗнаменатель не равен 1\n");
+            printf("\nDenminator isn`t 1.\n");
     }
     else
-        printf("\nЧисла(-ел) не существует\n");
+        printf("\nError, numer doesn`t exist!\n");
 	return result;
 }

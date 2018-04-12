@@ -31,8 +31,7 @@ PLNM DER_P_P(PLNM poly){
 		}
 	}
 	else
-		printf("Многочлена не существует! \n");
-	
+		printf("Polynomial doesn`t exist!\n");	
 	return ans;
 }
 

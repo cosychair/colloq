@@ -22,7 +22,6 @@ helpAddNumber
 Функция не возвращает никаких значений
 
 */
-
 void helpAddNumber(int* numberfirst, int* numbersecond, int** answer, int base, int* r, int addSecNumb, int start, int finish)
 {
 	int numbAlen = start;
@@ -75,7 +74,7 @@ LNGNT ADD_NN_N(LNGNT first, LNGNT second)
 		error = 1;
 
 	if (error)
-		printf("\nОшибка с числом, его не существует!\n");
+		printf("\nError, number doesn`t exist!\n");
 
 	return answer;
 }

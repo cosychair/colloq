@@ -31,7 +31,7 @@ FRCT ADD_QQ_Q(FRCT x, FRCT y)
         error = 1;
     
     if(error)
-        cout<< "Ошибка, одно из чисел отсутсвует!";
+        cout<< "Error, numer doesn`t exist!\n";
 	sum = RED_Q_Q(sum);
     return sum;
 }

@@ -14,7 +14,7 @@ int INT_Q_B(FRCT num)
 	}
 	else
 	{
-		std::cout << "Ошибка, число не существует!" ;
+		std::cout << "Error, numer doesn`t exist!";
 		ans = -1;
 	}
 	return ans;

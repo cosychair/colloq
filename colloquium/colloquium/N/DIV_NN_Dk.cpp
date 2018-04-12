@@ -44,7 +44,7 @@ LNGNT DIV_NN_Dk(LNGNT pervoe,LNGNT vtoroe)
         error = 1;
 
     if(error)
-        printf("\nОшибка, число не существует!\n");
+        printf("\nError, number doesn`t exist!\n");
 
     return answer;
 }

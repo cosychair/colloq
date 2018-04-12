@@ -32,7 +32,7 @@ LNGINT DIV_ZZ_Z(LNGINT divident, LNGINT divider)
 			err = 1;
 
 		if (err)
-			std::cout << "Ошибка, число не существует!";
+			std::cout << "Error, numer doesn`t exist!";
 	}
 	ed.A[0] = 0;
 	ans = ed;

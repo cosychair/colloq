@@ -11,9 +11,11 @@
 #include "../colloquium/Input/inputZ.h"
 #include "../colloquium/Input/inputN.h"
 #include "../colloquium/Input/inputQ.h"
+#include "../colloquium/Input/inputP.h"
 #include "../colloquium/Output/outputZ.h"
 #include "../colloquium/Output/outputN.h"
 #include "../colloquium/Output/outputQ.h"
+#include "../colloquium/Output/outputP.h"
 #include "../colloquium/Output/outputCom.h"
 using namespace std;
 
@@ -42,7 +44,10 @@ int main()
 			printMenuQ();
 			chooseFunctionQ();
 			break;
-		case 'P': break;
+		case 'P':
+			printMenuP();
+			chooseFunctionP();
+			break;
 		default:
 			printError(); type = 'd';
 			if (type == 0) continue; break;
@@ -326,5 +331,103 @@ int chooseFunctionQ() {
 	cin.get();
 	freeQ(&a);
 	freeQ(&b);
+	return number;
+}
+
+int chooseFunctionP() {
+	PLNM a,b;
+	FRCT q;
+	int d;
+	int number = 0;
+	do {
+		cin >> number;
+		switch (number) {
+		case 1:
+			printPLN();
+			a = readP();
+			printPLN();
+			b = readP();
+			printP(ADD_PP_P(a,b));
+			break;
+		case 2:
+			printPLN();
+			a = readP();
+			printPLN();
+			b = readP();
+			printP(SUB_PP_P(a, b)); 
+			break;
+		case 3:
+			printPLN();
+			a = readP();
+			printFR();
+			q = readQ();
+			printP(MUL_PQ_P(a, q));
+		case 4:
+			printPLN();
+			a = readP();
+			printIN();
+			cin >> d;
+			printP(MUL_Pxk_P(a,d));
+			break;
+		case 5:
+			printPLN();
+			a = readP();
+			printQ(LED_P_Q(a));
+			break;
+		case 6:
+			printPLN();
+			a = readP();
+			cout<<"\n"<<DEG_P_N(a)<<endl;
+			break;
+		case 7:
+			printPLN();
+			a = readP();
+			printP(FAC_P_Q(a));
+			break;
+		case 8:
+			printPLN();
+			a = readP();
+			printPLN();
+			b = readP();
+			printP(MUL_PP_P(a, b));
+			break;
+		/*case 9:
+			printPLN();
+			a = readP();
+			printPLN();
+			b = readP();
+			printP(DIV_PP_P(a, b));
+			break;
+		case 10:
+			printPLN();
+			a = readP();
+			printPLN();
+			b = readP();
+			printP(MOD_PP_P(a, b));
+			break;
+		case 11:
+			printPLN();
+			a = readP();
+			printPLN();
+			b = readP();
+			printP(GCF_PP_P(a, b));
+			break;*/
+		case 12:
+			printPLN();
+			a = readP();
+			printP(DER_P_P(a));
+			break;
+		/*case 13:
+			printPLN();
+			a = readP();
+			printP(NMR_P_P(a));
+			break;*/
+		default: printError(); number = 0; break;
+		}
+	} while (number == 0);
+	cin.get();
+	cin.get();
+	//freeP(&a);
+	//freeP(&b);
 	return number;
 }

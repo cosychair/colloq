@@ -30,7 +30,7 @@ LNGNT DIV_NN_N(LNGNT a, LNGNT b)
 			error = 1;
 
 		if (error)
-			printf("\nОшибка, число не существует!\n");
+			printf("\nError, number doesn`t exist!\n");
 
 		return ans;
 	}

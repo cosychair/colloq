@@ -20,6 +20,6 @@ PLNM MUL_Pxk_P(PLNM polynom, int degree){
         polynom.deg += degree;
     }
     else
-        printf("\nСтепень должна быть >= 0\n");
+        printf("\nPolynomial doesn`t exist!\n");
 	return polynom;
 }

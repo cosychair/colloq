@@ -14,7 +14,7 @@ LNGNT LCM_NN_N(LNGNT firstNum, LNGNT secondNum){
             ans = MUL_NN_N(firstNum, DIV_NN_N(secondNum, nod));
     }
     else
-        printf("\nОшибка, числа не существует!\n");
+        printf("\nError, numer doesn`t exist!\n");
 
     return ans;
 }

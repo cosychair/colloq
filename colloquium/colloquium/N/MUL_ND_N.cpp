@@ -30,7 +30,6 @@ LNGNT MUL_ND_N(LNGNT numb, int D)
 					result.A[result.n - 1] = mod;
 				}
 				reverseN(&result);
-				
 			}
 		}
 		else

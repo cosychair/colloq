@@ -20,7 +20,7 @@ FRCT TRANS_Z_Q(LNGINT t)
                     *(ttr.num.A+i) = *(t.A+i);
             }
         else
-            cout << ("Ошибка, числа не существует!")<<endl;
+            cout << ("Error, numer doesn`t exist!\n")<<endl;
         
         return ttr;
     }

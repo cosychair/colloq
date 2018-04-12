@@ -35,7 +35,7 @@ PLNM SUB_PP_P(PLNM P, PLNM V)
 		}
 	}
 	else
-		printf("Многочлена не существует \n");
+		printf("Polynomial doesn`t exist!\n");
 
 	return A;
 }

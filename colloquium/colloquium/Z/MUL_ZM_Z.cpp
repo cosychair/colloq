@@ -8,6 +8,6 @@ LNGINT MUL_ZM_Z(LNGINT number){
 			number.sign = !number.sign;
 		else;
     else
-        printf("\nОшибка, число не существует!\n");
+        printf("\nError, numer doesn`t exist!\n");
 	return number;
 }

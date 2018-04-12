@@ -17,8 +17,8 @@ LNGNT TRANS_Z_N(LNGINT numb)
 				outNumb.A[i] = numb.A[i];
 		}
 		else
-			cout<<"¬ведено отрицательное число, действие не может быть выполнено";
+			cout<<"Current action can`t be finished in case of you put negative number.";
 	else
-		cout<<"\nќшибка, число не существует!\n";
+		cout<<"\nError, numer doesn`t exist!\n";
 	return outNumb;
 }

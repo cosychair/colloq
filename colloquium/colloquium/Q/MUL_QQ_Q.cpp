@@ -18,7 +18,7 @@ FRCT MUL_QQ_Q(FRCT a, FRCT b)
         error = 1;
 
     if(error)
-        printf("\nОшибка, числа не существует!\n");
+        printf("\nError, numer doesn`t exist!\n");
 	ans = RED_Q_Q(ans);
     return ans;
 }

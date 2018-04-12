@@ -14,7 +14,7 @@ FRCT DIV_QQ_Q(FRCT divident, FRCT divider){
         ans = MUL_QQ_Q(divident, divider);
     }
     else
-        printf("\nОшибка, числа не существует!\n");
+        printf("\nError, numer doesn`t exist!\n");
 	ans = RED_Q_Q(ans);
     return ans;
 }

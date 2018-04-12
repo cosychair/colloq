@@ -17,13 +17,13 @@ LNGINT ADD_ZZ_Z(LNGINT x, LNGINT y)
         int g = POZ_Z_D(y);
         if(a.A && y.A)
         {
-           	if ((f == g && f) || f == 2 && g == 0 || g == 2 && f == 0)  
+           	if ((f == g && f) || f == 2 && g == 0 || g == 2 && f == 0)  //учитываются знаки
             {
-            	s = ADD_NN_N(a, b);//	выполнение сложения если 2 целых разных знаков
+            	s = ADD_NN_N(a, b);
 			}	
 			else
 			{
-				s = SUB_NN_N(a, b);// выполнение вычитания если 2 целых разных знаков
+				s = SUB_NN_N(a, b);
 			}
 			sum = TRANS_N_Z(s);
 			sum.sign = 0;
