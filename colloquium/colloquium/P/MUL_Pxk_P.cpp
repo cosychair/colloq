@@ -6,7 +6,7 @@
 
 
 PLNM MUL_Pxk_P(PLNM polynom, int degree){
-    if(degree >= 0){
+    if(degree > 0){
         polynom.C = (FRCT*)realloc(polynom.C, (polynom.deg+degree) * sizeof(FRCT));
         for(int i = polynom.deg+1; i <= polynom.deg + degree; ++i){
             polynom.C[i].num.sign = 1;
@@ -19,7 +19,7 @@ PLNM MUL_Pxk_P(PLNM polynom, int degree){
         }
         polynom.deg += degree;
     }
-    else
-        printf("\nPolynomial doesn`t exist!\n");
+    //else
+      //  printf("\nPolynomial doesn`t exist!\n");
 	return polynom;
 }

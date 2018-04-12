@@ -47,12 +47,12 @@ int main()
 		case 'Q':
 			system("cls");
 			printMenuQ();
-			infoP();
+			infoQ();
 			break;
 		case 'P':
 			system("cls");
 			printMenuP();
-			infoQ();
+			infoP();
 			break;
 		case 'E':break;
 		default: printError(); type = 'd'; break;
