@@ -24,7 +24,7 @@ void hint() {
 
 void printError() {
 	cout << "**********SORRY, BUT THIS IS ERROR**********" << endl;
-	cout << "Print \"0\" if you want to go back in the begging, or try to print what you want more carefull." << endl;
+	cout << "Print \"0\" if you want to go back in the begining, or try to print what you want more carefull." << endl;
 	//можете реаизовать тему с возвратом в главное меню
 }
 

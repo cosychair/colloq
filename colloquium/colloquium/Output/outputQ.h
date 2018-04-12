@@ -36,4 +36,6 @@ printMenuQ
 */
 void printMenuQ();
 
+void showInfoMenuQ(int number);
+
 #endif

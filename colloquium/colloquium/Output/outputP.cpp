@@ -3,6 +3,7 @@
 #include "outputQ.h"
 #include <iostream>
 #include <iomanip>
+#include "../Info/info.h"
 using namespace std;
 
 void printP(PLNM a) {
@@ -50,4 +51,28 @@ void printMenuP() {
 	cout << "Example: 1" << endl;
 	cout << "If you need more information about functions print \"info\" and after it print number of the function you want." << endl;
 	cout << "Example: info1" << endl;
+}
+
+void showInfoMenuP(int number)
+{
+	cout << endl;
+	cout << "**********FUNCTION " << number << "**********" << endl << endl;
+	switch (number)
+	{
+	case 1: cout << "Polynomial addition." << endl; break;
+	case 2: cout << "Polynomial subtraction." << endl; break;
+	case 3: cout << "Multiply polynomial by fraction." << endl; break;
+	case 4: cout << "Multiply polynomial by x^k" << endl; break;
+	case 5: cout << "The highest coefficent of this polynomial." << endl; break;
+	case 6: cout << "The degree of this polynomial." << endl; break;
+	case 7: cout << "Getting NOC of coefficents` denominators and GCF of numerators from the polynomial." << endl; break;
+	case 8: cout << "Multiplying polynomials" << endl; break;
+	case 9: cout << "Quotient from dividing one polynomial on another(divider isn`t zero)" << endl; break;
+	case 10: cout << "Residue from dividing one polynomial on another(divider isn`t zero)" << endl; break;
+	case 11: cout << "GCF of polynomials." << endl; break;
+	case 12: cout << "Derivative of polynomial." << endl; break;
+	case 13: cout << "Ìultiple roots."<< endl; break;
+	default: cout << "Error! Wrong number." << endl; infoP(); break;
+	}
+	cout << endl;
 }

@@ -12,16 +12,16 @@ buffer, fullBuffer вспомогательные переменные (многочлены)
 
 PLNM MUL_PP_P(PLNM poly1, PLNM poly2)
 {
-
-    PLNM result, buffer, fullBuffer;
+	
+    PLNM result, buffer = poly1, fullBuffer = poly2;
     result.deg = poly1.deg + poly2.deg;
-    /*for(unsigned i=0; i<poly2.deg; i++)
+    for(unsigned i=0; i<poly2.deg; i++)
     {
-        buffer.C[i] = MUL_Pxk_P(poly1, poly2.deg);
-		fullBuffer.C[i] = MUL_PQ_P(poly1, poly2.C[i]);
-		result.C[i] = ADD_PP_P(poly1, fullBuffer); //нестыковка типов дробь не может быть равна полиному
-    }*/
-
+/*        buffer.C[i] = MUL_Pxk_P(poly1, poly2.deg).C[i];
+		fullBuffer.C[i] = MUL_PQ_P(poly1, poly2.C[i]).C[i];
+		result.C[i] = ADD_PP_P(poly1, fullBuffer).C[i]; //нестыковка типов дробь не может быть равна полиному
+  */  }
+	
     //printf("\nВместо этого текста должен вывестись полином, но не знама в каком виде он выводится :(\n");
 
     return result;

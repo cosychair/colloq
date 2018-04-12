@@ -3,6 +3,7 @@
 #include <iomanip>
 #include "outputN.h"
 #include "outputZ.h"
+#include "../Info/info.h"
 using namespace std;
 
 void printQ(FRCT a) {
@@ -32,4 +33,23 @@ void printMenuQ() {
 	cout << "Example: 1" << endl;
 	cout << "If you need more information about functions print \"info\" and after it print number of the function you want." << endl;
 	cout << "Example: info1" << endl;
+}
+
+void showInfoMenuQ(int number)
+{
+	cout << endl;
+	cout << "**********FUNCTION " << number << "**********" << endl << endl;
+	switch (number)
+	{
+	case 1: cout << "Reduction of  the fraction." << endl; break;
+	case 2: cout << "Checking if this number is integer, returns \"yes\" or \"no\"" << endl; break;
+	case 3: cout << "Tranforming integer number to fraction." << endl; break;
+	case 4: cout << "Tranforming fraction to integer number(only if denominator)." << endl; break;
+	case 5: cout << "Fractions addition." << endl; break;
+	case 6: cout << "Fractions subtraction." << endl; break;
+	case 7: cout << "Multiplying fractions." << endl; break;
+	case 8: cout << "Dividing fractions (divider isn`t zero)." << endl; break;
+	default: cout << "Error! Wrong number." << endl; infoQ(); break;
+	}
+	cout << endl;
 }

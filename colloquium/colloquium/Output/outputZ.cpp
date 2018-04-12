@@ -42,18 +42,21 @@ void printMenuZ() {
 
 void showInfoMenuZ(int number)
 {
+	cout << endl;
+	cout << "**********FUNCTION " << number << "**********" << endl << endl;
 	switch (number)
 	{
-	case 1: cout << "јбсолютна€ величина числа, результат - натуральное" << endl; break;
-	case 2: cout << "ќпределение положительности числа (2 - положительное, 0 Ч равное нулю, 1 - отрицательное)" << endl; break;
-	case 3: cout << "”множение целого на (-1)" << endl; break;
-	case 4: cout << "ѕреобразование натурального в целое" << endl; break;
-	case 5: cout << "ѕреобразование целого неотрицательного в натуральное" << endl; break;
-	case 6: cout << "—ложение целых чисел" << endl; break;
-	case 7: cout << "¬ычитание целых чисел" << endl; break;
-	case 8: cout << "”множение целых чисел" << endl; break;
-	case 9: cout << "„астное от делени€ большего целого числа на меньшее или равное натуральное с остатком (делитель отличен от нул€)" << endl; break;
-	case 10: cout << "ќстаток от делени€ большего целого числа на меньшее или равное натуральное с остатком (делитель отличен от нул€)" << endl; break;
+	case 1: cout << "Modulus, returns natural number." << endl; break;
+	case 2: cout << "Checking positivity of number(2 - pozitive, 0 Ч zero, 1 - negative)" << endl; break;
+	case 3: cout << "Multiplying integer number by (-1)" << endl; break;
+	case 4: cout << "Transforming natural number to integer." << endl; break;
+	case 5: cout << "TRansforming integer number to natural." << endl; break;
+	case 6: cout << "Integer numbers addition." << endl; break;
+	case 7: cout << "Integer numbers subtraction." << endl; break;
+	case 8: cout << "Multiplying integer numbers" << endl; break;
+	case 9: cout << "Quotient from dividing one integer number on another(divider isn`t zero)"  << endl; break;
+	case 10: cout << "Residue from dividing one integer number on another(divider isn`t zero)" << endl; break;
 	default: cout << "Error! Wrong number. Please try again." << endl; infoZ(); break;
 	}
+	cout << endl;
 }
