@@ -1,3 +1,7 @@
-﻿  info.cpp
+﻿  colloquium.cpp
+  outputQ.cpp
+  outputP.cpp
+  outputCom.cpp
+  Создание кода...
   colloquium.vcxproj -> C:\Курс_1\Дискретная математика\colloquium\Debug\colloquium.exe
   colloquium.vcxproj -> C:\Курс_1\Дискретная математика\colloquium\Debug\colloquium.pdb (Partial PDB)
