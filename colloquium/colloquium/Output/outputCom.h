@@ -13,4 +13,5 @@ void printIN();
 
 void printFR();
 
+void printPLN();
 #endif

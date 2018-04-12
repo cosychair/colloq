@@ -37,3 +37,10 @@ void printFR() {
 	cout << "Example: 1/2" << endl;
 	cout << "Please notice there aren`t any spaces!" << endl;
 }
+
+void printPLN() {
+	cout << "Please print the polynomial." << endl;
+	cout << "Example: 3/2x^6+1/2x^3+2/1x^1-6/3" << endl;
+	cout << "Please notice there aren`t any spaces!" << endl;
+	cout << "Tap enter twice, after you write the polyomial into the console." << endl;
+}

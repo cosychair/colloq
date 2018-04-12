@@ -2,6 +2,7 @@
 #include"../N/longNat.h"
 #include <iostream>
 #include <iomanip>
+#include "inputP.h"
 #include "../Output/outputCom.h"
 using namespace std;
 

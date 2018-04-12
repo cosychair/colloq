@@ -9,7 +9,6 @@ void printQ(FRCT a) {
 	printZ(a.num);
 	cout << "/";
 	printN(a.den);
-	cout << endl;
 }
 
 void freeQ(FRCT* a) {
