@@ -61,6 +61,8 @@ int max(int a, int b)
 }
 
 PLNM readP() {
+	char c;
+	while (std::cin.get(c) && c != '\n');
 	//считываем, удаляем пробелы
 	std::string str; std::getline(std::cin, str); str += '+';
 	str = delGaps(str);
