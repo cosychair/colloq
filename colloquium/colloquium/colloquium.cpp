@@ -25,7 +25,6 @@ int main()
 {
 	char type;
 	do{
-		system("cls");
 	greeting();
 	 type = 'd';//d from the dull user
 	do {
