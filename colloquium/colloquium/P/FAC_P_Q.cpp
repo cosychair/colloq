@@ -32,8 +32,6 @@ PLNM FAC_P_Q(PLNM x)
 			k = LCM_NN_N(k, x.C[i].den);
 		}
 	}
-	printP(x);
-	cout << endl;
 	p = true;
 	//Вынесение НОК знаменателя и нахождение НОД числителя  
 	for(int i = 1; i <= n; i++)
@@ -46,7 +44,6 @@ PLNM FAC_P_Q(PLNM x)
 			x.C[i - 1].num = DIV_ZZ_Z(MUL_ZZ_Z(x.C[i- 1].num, TRANS_N_Z(k)),TRANS_N_Z(x.C[i - 1].den));
 			x.C[i].den = a;
 			x.C[i - 1].den = a;
-			cout << POZ_Z_D(x.C[i].num) << endl;
 			if (POZ_Z_D(x.C[i].num))
 				d = GCF_NN_N(ABS_Z_N(x.C[i - 1].num), ABS_Z_N(x.C[i].num));
 			else
@@ -61,10 +58,7 @@ PLNM FAC_P_Q(PLNM x)
 				d = GCF_NN_N(d, ABS_Z_N(x.C[i].num));
 			else;
 		}
-		printN(d);
-		cout << endl;
 	}
-	printP(x);
 	p = true;
 	//Вынесение НОД
 	for(int i = 0; i <= n; i++)

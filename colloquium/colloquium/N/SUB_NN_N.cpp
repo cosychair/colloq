@@ -13,7 +13,7 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 {
 
 	int i = y.n - 1;
-	int *z = new int[x.n];
+	int *z = (int*)malloc(sizeof(int)*x.n);;
 	LNGNT sub;
 	int l = 0;
 	bool t = false;
@@ -60,7 +60,7 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 	}
 	if (i == x.n)
 	{
-		sub.A = new int[1];
+		sub.A = (int*)malloc(sizeof(int));
 		sub.A[0] = 0;
 		sub.n = 1;
 	}
@@ -68,7 +68,7 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 	{
 		
 		sub.n = x.n - i;
-		sub.A = new int[sub.n];
+		sub.A = (int*)malloc(sizeof(int)*sub.n);
 		for (i; i < x.n; i++)
 		{
 			sub.A[sub.n - (x.n - i)] = z[i];

@@ -9,6 +9,9 @@ using namespace std;
 LNGINT MUL_ZZ_Z(LNGINT ln, LNGINT lt)
     {
         LNGINT ttr;
+		ttr.A = NULL;
+		ttr.n = 0;
+		ttr.sign = 0;
         LNGNT lx;
         int error = 0;
         if(ln.A && lt.A)

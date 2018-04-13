@@ -12,7 +12,7 @@ PLNM ADD_PP_P(PLNM P, PLNM V)
 		if (P.deg >= V.deg)
 		{
 			A.deg = P.deg;
-			A.C = (FRCT*)malloc((A.deg+1) * sizeof(FRCT));
+			A.C = (FRCT*)malloc((A.deg + 1) * sizeof(FRCT));
 
 			for (int var = 0;var < (V.deg+1);++var)
 				*(A.C + P.deg - var)  = ADD_QQ_Q(*(P.C+P.deg - var), *(V.C+V.deg-var));
@@ -23,7 +23,7 @@ PLNM ADD_PP_P(PLNM P, PLNM V)
 		else
 		{
 			A.deg = V.deg;
-			A.C = (FRCT*)malloc((A.deg+1) * sizeof(FRCT));
+			A.C = (FRCT*)malloc((A.deg + 1) * sizeof(FRCT));
 
 			for (int var = 0;var < (P.deg+1);++var)
 				*(A.C + V.deg - var) = ADD_QQ_Q(*(V.C + V.deg - var), *(P.C + P.deg - var));

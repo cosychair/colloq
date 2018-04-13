@@ -12,6 +12,7 @@ PLNM MUL_PQ_P(PLNM M, FRCT Q)
 	{
 		A.deg = M.deg;
 		A.C = (FRCT*)malloc((A.deg +1) * sizeof(FRCT));
+		
 
 		for (int i = 0;i < (M.deg +1);++i)
 			A.C[i] = MUL_QQ_Q(M.C[i], Q);

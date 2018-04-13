@@ -37,23 +37,21 @@ void printMenuP() {
 	system("cls");
 	cout << "\n*********MENU FUNCTIONS FOR POLYNOMS**********" << endl;
 	cout << "Please choose the function you want from the list below." << endl;
-	cout << "1 - ADD_PP_P" << endl;
-	cout << "2 - SUB_PP_P" << endl;
-	cout << "3 - MUL_PQ_P" << endl;
-	cout << "4 - MUL_Pxk_P" << endl;
-	cout << "5 - LED_P_Q" << endl;
-	cout << "6 - DEG_P_N" << endl;
-	cout << "7 - FAC_P_Q" << endl;
-	cout << "8 - MUL_PP_P" << endl;
-	cout << "9 - DIV_PP_P" << endl;
-	cout << "10 - MOD_PP_P" << endl;
-	cout << "11 - GCF_PP_P" << endl;
-	cout << "12 - DER_P_P" << endl;
-	cout << "13 - NMR_P_P" << endl;
+	cout << "1 - ADD_PP_P - Polynomial addition." << endl;
+	cout << "2 - SUB_PP_P - Polynomial subtraction." << endl;
+	cout << "3 - MUL_PQ_P - Multiply polynomial by fraction." << endl;
+	cout << "4 - MUL_Pxk_P - Multiply polynomial by x^k" << endl;
+	cout << "5 - LED_P_Q - The highest coefficent of this polynomial." << endl;
+	cout << "6 - DEG_P_N - The degree of this polynomial." << endl;
+	cout << "7 - FAC_P_Q - Getting NOC of coefficents` denominators and GCF of numerators from the polynomial." << endl;
+	cout << "8 - MUL_PP_P - Multiplying polynomials." << endl;
+	cout << "9 - DIV_PP_P - Quotient from dividing one polynomial on another(divider isn`t zero)" << endl;
+	cout << "10 - MOD_PP_P - Residue from dividing one polynomial on another(divider isn`t zero)" << endl;
+	cout << "11 - GCF_PP_P - GCF of polynomials." << endl;
+	cout << "12 - DER_P_P - Ìultiple roots." << endl;
+	cout << "13 - NMR_P_P - Error! Wrong number." << endl;
 	cout << "To select the function you should write it`s number to the console and press \"enter\" button." << endl;
 	cout << "Example: 1" << endl;
-	cout << "If you need more information about functions print \"info\" and after it print number of the function you want." << endl;
-	cout << "Example: info1" << endl;
 }
 
 void showInfoMenuP(int number)
