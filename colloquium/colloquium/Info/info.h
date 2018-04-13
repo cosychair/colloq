@@ -24,4 +24,6 @@ void infoQ();
 void infoP();
 
 void printAuthors();
+
+void sleep(int k);
 #endif
