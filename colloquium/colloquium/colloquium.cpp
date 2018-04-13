@@ -21,9 +21,6 @@
 #include "../colloquium/Info/info.h"
 using namespace std;
 
-int chooseFunctionQ();//Выбор функций для дробей
-int chooseFunctionP();//Выбор функций для многочленов
-
 int main()
 {
 	char type;
@@ -55,6 +52,7 @@ int main()
 			infoP();
 			break;
 		case 'E':break;
+		case 'A':printAuthors(); break;
 		default: printError(); type = 'd'; break;
 		}
 	} while (type == 'd');

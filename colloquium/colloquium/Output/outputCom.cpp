@@ -7,6 +7,8 @@ using namespace std;
 void greeting() {
 	cout << "**********COMPUTER ALGEBRA SYSTEM**********" << endl;
 	cout << "This system affords you an opportunity of working with long numbers." << endl;
+	cout << "Dont foget to visit menu УauthorsФ to learn mort." << endl;
+	cout << "If program stops printing text print enter." << endl;
 	hint();
 }
 
@@ -16,6 +18,7 @@ void hint() {
 	cout << "Z - integer numbers," << endl;
 	cout << "Q - fractions," << endl;
 	cout << "P - polynoms," << endl;
+	cout << "A -  authors," << endl;
 	cout << "E - Exit." << endl;
 	cout << "To select the representation you should write it`s letter to the console and press \"enter\" button." << endl;
 	cout << "Notice! Letters are capital." << endl;
@@ -24,8 +27,7 @@ void hint() {
 
 void printError() {
 	cout << "**********SORRY, BUT THIS IS ERROR**********" << endl;
-	cout << "Print \"0\" if you want to go back in the begining, or try to print what you want more carefull." << endl;
-	//можете реаизовать тему с возвратом в главное меню
+	cout << "Try to print what you want more carefull." << endl;
 }
 
 void printIN() {
