@@ -8,6 +8,8 @@ using namespace std;
 LNGNT TRANS_Z_N(LNGINT numb)
 {
 	LNGNT outNumb;
+	outNumb.A = NULL;
+	outNumb.n = 0;
 	if (numb.A)
 		if (numb.sign == 0)
 		{

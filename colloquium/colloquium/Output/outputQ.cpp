@@ -19,8 +19,10 @@ void freeQ(FRCT* a) {
 
 void printMenuQ() {
 	system("cls");
-	cout << "\n*********MENU FUNCTIONS FOR FRACTIONS**********" << endl;
+	cout << "*********MENU FUNCTIONS FOR FRACTIONS**********" << endl;
+	cout << endl;
 	cout << "Please choose the function you want from the list below." << endl;
+	cout << endl;
 	cout << "1 - RED_Q_Q - Reduction of  the fraction." << endl;
 	cout << "2 - INT_Q_B - Checking if this number is integer, returns \"yes\" or \"no\"" << endl;
 	cout << "3 - TRANS_Z_Q - Tranforming integer number to fraction." << endl;
@@ -29,13 +31,13 @@ void printMenuQ() {
 	cout << "6 - SUB_QQ_Q - Fractions subtraction." << endl;
 	cout << "7 - MUL_QQ_Q - Multiplying fractions." << endl;
 	cout << "8 - DIV_QQ_Q - Dividing fractions (divider isn`t zero)." << endl;
+	cout << endl;
 	cout << "To select the function you should write it`s number to the console and press \"enter\" button." << endl;
 	cout << "Example: 1" << endl;
 }
 
 void showInfoMenuQ(int number)
 {
-	cout << endl;
 	cout << "**********FUNCTION " << number << "**********" << endl << endl;
 	switch (number)
 	{
@@ -47,7 +49,7 @@ void showInfoMenuQ(int number)
 	case 6: cout << "Fractions subtraction." << endl; break;
 	case 7: cout << "Multiplying fractions." << endl; break;
 	case 8: cout << "Dividing fractions (divider isn`t zero)." << endl; break;
-	default: cout << "Error! Wrong number." << endl; infoQ(); break;
+	default: cout << "Error! Wrong number." << endl; break;
 	}
 	cout << endl;
 }

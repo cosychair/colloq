@@ -22,8 +22,10 @@ void freeN(LNGNT* a)
 
 void printMenuN() {
 	system("cls");
-	cout << "\n*********MENU FUNCTIONS FOR NATURAL NUMBERS**********" << endl;
+	cout << "*********MENU FUNCTIONS FOR NATURAL NUMBERS**********" << endl;
+	cout << endl;
 	cout << "Please choose the function you want from the list below." << endl;
+	cout << endl;
 	cout << "1 - COM_NN_D - Comparing 2 natural numbers: 2 - if the first number is bigger than the second, 0 - if equal, 1 - if the second number is bigger than the first." << endl;
 	cout << "2 - NZER_N_B - Zero checking: if number isn`t zero, yes, else no." << endl;
 	cout << "3 - ADD_1N_N - Adding 1 to the natural number." << endl;
@@ -38,14 +40,15 @@ void printMenuN() {
 	cout << "12 - MOD_NN_N - Residue from dividing one natural number on another(divider isn`t zero)" << endl;
 	cout << "13 - GCF_NN_N - GCD of natural numbers." << endl;
 	cout << "14 - LCM_NN_N - NOC of natural numbers." << endl;
+	cout << endl;
 	cout << "To select the function you should write it`s number to the console and press \"enter\" button." << endl;
 	cout << "Example: 1" << endl;
 }
 
 void showInfoMenuN(int number)
 {
+	cout << "**********FUNCTION " << number << "**********" << endl;
 	cout << endl;
-	cout << "**********FUNCTION " << number << "**********" << endl << endl;
 	switch (number)
 	{
 	case 1: cout << "Comparing 2 natural numbers: 2 - if the first number is bigger than the second, 0 - if equal, 1 - if the second number is bigger than the first." << endl; break;
@@ -62,7 +65,7 @@ void showInfoMenuN(int number)
 	case 12: cout << "Residue from dividing one natural number on another(divider isn`t zero)" << endl; break;
 	case 13: cout << "GCD of natural numbers." << endl; break;
 	case 14: cout << "NOC of natural numbers." << endl; break;
-	default: cout << "Error! Wrong number." << endl; infoN(); break;
+	default: cout << "Error! Wrong number." << endl;break;
 	}
 	cout << endl;
 }

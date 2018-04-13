@@ -30,33 +30,33 @@ int main()
 	do {
 		cin >> type;
 		switch (type) {
-		case 'N':
+		case 'n':case 'N':
 			system("cls");
 			printMenuN();
 			infoN();
 			break;
-		case 'Z':
+		case 'z':case 'Z':
 			system("cls");
 			printMenuZ();
 			infoZ();
 			break;
-		case 'Q':
+		case 'q':case 'Q':
 			system("cls");
 			printMenuQ();
 			infoQ();
 			break;
-		case 'P':
+		case 'p': case 'P':
 			system("cls");
 			printMenuP();
 			infoP();
 			break;
-		case 'Y':cout << "GG WP" << endl; sleep(100); exit(0); break; break;
+		case 'E' :case 'e':cout << "GG WP" << endl; sleep(100); exit(0); break; break;
 		case 'A':printAuthors(); break;
 		default: printError(); type = 'd'; break;
 		}
 	} while (type == 'd');
-	cout << endl<<"Do you want to continue using this program? If yes print \'Y\', if no print any other button(please, switch off your pc by this action)" << endl;
+	cout << endl<<"Do you want to continue using this program? If yes print \'Y\', if no print E or switch your PC off." << endl;
 	cin >> type;
-}while (type == 'Y');
+}while (type == 'Y'|| type == 'y');
 	return 0;
 }

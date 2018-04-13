@@ -169,9 +169,9 @@ int chooseFunctionN(int number) {
 		b = readN();
 		printN(LCM_NN_N(a, b));
 		break;
-	default: printError(); number = 0; break;
+	default: printError(); break;
 	}
-	/*} while (number == 0);*/
+	//} while (number == 0);*/
 	freeN(&a);
 	freeN(&b);
 	return number;
@@ -281,7 +281,7 @@ int chooseFunctionZ(int number) {
 		b = readZ();
 		printZ(MOD_ZZ_Z(a, b));
 		break;
-	default: printError(); number = 0; break;
+	default: printError();  break;
 	}
 	//} while (number == 0);
 	freeZ(&a);
@@ -377,7 +377,7 @@ int chooseFunctionQ(int number) {
 		b = readQ();
 		printQ(DIV_QQ_Q(a, b));
 		break;
-	default: printError(); number = 0; break;
+	default: printError(); break;
 	}
 	/*} while (number == 0);*/
 	cin.get();
@@ -533,7 +533,7 @@ int chooseFunctionP(int number) {
 		a = readP();
 		printP(NMR_P_P(a));
 		break;*/
-	default: printError(); number = 0; break;
+		default: printError(); break;
 	}
 	/*} while (number == 0);*/
 	cin.get();

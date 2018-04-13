@@ -8,8 +8,8 @@ void greeting() {
 	system("cls");
 	cout << "**********COMPUTER ALGEBRA SYSTEM**********" << endl;
 	cout << "This system affords you an opportunity of working with long numbers." << endl;
-	cout << "Dont foget to visit menu \"authors\" to learn mort." << endl;
-	cout << "If program stops printing text print enter." << endl;
+	cout << "Dont forget to visit menu \"authors\" to learn more." << endl;
+	cout << "If program stops printing text press enter." << endl;
 	hint();
 }
 
@@ -22,7 +22,6 @@ void hint() {
 	cout << "A -  authors," << endl;
 	cout << "E - Exit." << endl;
 	cout << "To select the representation you should write it`s letter to the console and press \"enter\" button." << endl;
-	cout << "Notice! Letters are capital." << endl;
 	cout << "Example: N" << endl;
 }
 
@@ -43,6 +42,5 @@ void printFR() {
 
 void printPLN() {
 	cout << "Please print the polynomial." << endl;
-	cout << "Example: 3/2x^6+1/2x^3+2/1x^1-6/3" << endl;
-	cout << "Please notice there aren`t any spaces!" << endl;
+	cout << "Example: 3/2x^6+1/2x^3+2x-6" << endl;
 }

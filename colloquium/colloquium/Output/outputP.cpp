@@ -35,8 +35,10 @@ void freeP(PLNM* a) {
 
 void printMenuP() {
 	system("cls");
-	cout << "\n*********MENU FUNCTIONS FOR POLYNOMS**********" << endl;
+	cout << "*********MENU FUNCTIONS FOR POLYNOMS**********" << endl;
+	cout << endl;
 	cout << "Please choose the function you want from the list below." << endl;
+	cout << endl;
 	cout << "1 - ADD_PP_P - Polynomial addition." << endl;
 	cout << "2 - SUB_PP_P - Polynomial subtraction." << endl;
 	cout << "3 - MUL_PQ_P - Multiply polynomial by fraction." << endl;
@@ -48,15 +50,15 @@ void printMenuP() {
 	cout << "9 - DIV_PP_P - Quotient from dividing one polynomial on another(divider isn`t zero)" << endl;
 	cout << "10 - MOD_PP_P - Residue from dividing one polynomial on another(divider isn`t zero)" << endl;
 	cout << "11 - GCF_PP_P - GCF of polynomials." << endl;
-	cout << "12 - DER_P_P - Ìultiple roots." << endl;
+	cout << "12 - DER_P_P - Multiple roots." << endl;
 	cout << "13 - NMR_P_P - Error! Wrong number." << endl;
+	cout << endl;
 	cout << "To select the function you should write it`s number to the console and press \"enter\" button." << endl;
 	cout << "Example: 1" << endl;
 }
 
 void showInfoMenuP(int number)
 {
-	cout << endl;
 	cout << "**********FUNCTION " << number << "**********" << endl << endl;
 	switch (number)
 	{
@@ -72,8 +74,8 @@ void showInfoMenuP(int number)
 	case 10: cout << "Residue from dividing one polynomial on another(divider isn`t zero)" << endl; break;
 	case 11: cout << "GCF of polynomials." << endl; break;
 	case 12: cout << "Derivative of polynomial." << endl; break;
-	case 13: cout << "Ìultiple roots."<< endl; break;
-	default: cout << "Error! Wrong number." << endl; infoP(); break;
+	case 13: cout << "Multiple roots."<< endl; break;
+	default: cout << "Error! Wrong number." << endl; break;
 	}
 	cout << endl;
 }

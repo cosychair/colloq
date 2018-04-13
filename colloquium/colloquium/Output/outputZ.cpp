@@ -22,8 +22,10 @@ void freeZ(LNGINT* a) {
 
 void printMenuZ() {
 	system("cls");
-	cout << "\n*********MENU FUNCTIONS FOR INTEGER NUMBERS**********" << endl;
+	cout << "*********MENU FUNCTIONS FOR INTEGER NUMBERS**********" << endl;
+	cout << endl;
 	cout << "Please choose the function you want from the list below." << endl;
+	cout << endl;
 	cout << "1 - ABS_Z_N - Modulus, returns natural number." << endl;
 	cout << "2 - POZ_Z_D - Checking positivity of number(2 - pozitive, 0 — zero, 1 - negative)" << endl;
 	cout << "3 - MUL_ZM_Z - Multiplying integer number by (-1)" << endl;
@@ -34,13 +36,13 @@ void printMenuZ() {
 	cout << "8 - MUL_ZZ_Z - Multiplying integer numbers" << endl;
 	cout << "9 - DIV_ZZ_Z - Quotient from dividing one integer number on another(divider isn`t zero)" << endl;
 	cout << "10 - MOD_ZZ_Z - Residue from dividing one integer number on another(divider isn`t zero)" << endl;
+	cout << endl;
 	cout << "To select the function you should write it`s number to the console and press \"enter\" button." << endl;
 	cout << "Example: 1" << endl;
 }
 
 void showInfoMenuZ(int number)
 {
-	cout << endl;
 	cout << "**********FUNCTION " << number << "**********" << endl << endl;
 	switch (number)
 	{
@@ -54,7 +56,7 @@ void showInfoMenuZ(int number)
 	case 8: cout << "Multiplying integer numbers" << endl; break;
 	case 9: cout << "Quotient from dividing one integer number on another(divider isn`t zero)"  << endl; break;
 	case 10: cout << "Residue from dividing one integer number on another(divider isn`t zero)" << endl; break;
-	default: cout << "Error! Wrong number. Please try again." << endl; infoZ(); break;
+	default: cout << "Error! Wrong number. Please try again." << endl; break;
 	}
 	cout << endl;
 }
