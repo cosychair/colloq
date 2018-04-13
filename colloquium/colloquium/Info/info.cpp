@@ -21,8 +21,39 @@
 #include "../P/longPoly.h"
 #include "../P/longPolyFunctions.h"
 #include "info.h"
-
 using namespace std;
+
+void sleep(int time) {
+	for (int i = 0; i < time*1000000; i++);
+}
+
+void printAuthors() {
+	system("cls");
+	cout << "Architect and magnificent translator :" << endl;
+	cout << "Kirillov Daniil" << endl << endl;
+	sleep(300);
+	cout << "Manager and awesome test~maker :" << endl;
+	cout << "Ivanov Daniil" << endl << endl;	sleep(300);
+	cout << "The best testers and developers ever :" << endl;
+	cout << "Desyatnikov Gregory" << endl;	sleep(200);
+	cout << "Miller Vlad" << endl;	sleep(200);
+	cout << "Lebedev Anton" << endl; sleep(300);
+	cout << "Person  who knows all code because he did web version :" << endl; 
+	cout << "Zenkin Vlad" << endl << endl;sleep(300);
+	cout << "And our nice rapid function developers:" << endl;
+	cout << "Evich Nikita" << endl;	sleep(200);
+	cout << "Karmanov Dmitrii" << endl;	sleep(200);
+	cout << "Krasotkin Ivan" << endl;	sleep(200);
+	cout << "Lunev Pavel" << endl;	sleep(200);
+	cout << "Mazurkevich Dima" << endl;	sleep(200);
+	cout << "Bogdanov Kirill" << endl << endl;	sleep(300);
+
+	cout << "Dear user / viewers we spent huge amount of our energy on this progect for FREE, if we will do such things in future, we die homeless.\nWe need especially your support to do our next uncommercial projects.With love, DT." << endl;
+	cout << endl << "VISA(SBER)~5469550078016927" << endl;
+	cout << endl << "ETH~ 0xBAaf60eE4F28F39b0468AaF6116d75a2ed54698E" << endl;
+	cout << endl << "MAIL FOR GOLD DEALS ~secretlogin1@yandex.ru" << endl;
+}
+
 
 int chooseFunctionN(int number) {
 	LNGNT a, b;
@@ -485,7 +516,7 @@ int chooseFunctionP(int number) {
 		b = readP();
 		printP(GCF_PP_P(a, b));
 		break;*/
-	case 12:
+		case 12:
 		printPLN();
 		a = readP();
 		c = ' ';//fix print

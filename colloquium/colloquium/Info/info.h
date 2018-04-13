@@ -22,4 +22,6 @@ void infoZ();
 void infoQ();
 
 void infoP();
+
+void printAuthors();
 #endif
