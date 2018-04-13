@@ -50,7 +50,7 @@ int main()
 			printMenuP();
 			infoP();
 			break;
-		case 'E':break;
+		case 'Y':cout << "GG WP" << endl; sleep(100); exit(0); break; break;
 		case 'A':printAuthors(); break;
 		default: printError(); type = 'd'; break;
 		}
