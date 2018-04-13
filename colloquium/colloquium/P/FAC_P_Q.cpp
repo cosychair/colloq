@@ -69,6 +69,7 @@ PLNM FAC_P_Q(PLNM x)
 	//Вынесение НОД
 	for(int i = 0; i <= n; i++)
 	{
+		//if(d.A)
 		x.C[i].num = DIV_ZZ_Z(x.C[i].num, TRANS_N_Z(d));
 	}
 	return x;

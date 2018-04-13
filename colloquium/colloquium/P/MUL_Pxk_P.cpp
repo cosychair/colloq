@@ -1,12 +1,14 @@
 #include <cstdio>
 #include <cstdlib>
 #include "longPoly.h"
+#include <iostream>
 #include "../Q/longFracFunctions.h"
 #include "longPolyFunctions.h"
 
 
 PLNM MUL_Pxk_P(PLNM polynom, int degree){
     if(degree > 0){
+		std::cout << degree;
         polynom.C = (FRCT*)realloc(polynom.C, (polynom.deg+degree) * sizeof(FRCT));
         for(int i = polynom.deg+1; i <= polynom.deg + degree; ++i){
             polynom.C[i].num.sign = 1;
@@ -19,7 +21,7 @@ PLNM MUL_Pxk_P(PLNM polynom, int degree){
         }
         polynom.deg += degree;
     }
-    //else
-      //  printf("\nPolynomial doesn`t exist!\n");
+
+	else;
 	return polynom;
 }
