@@ -19,7 +19,7 @@ int COM_NN_D(LNGNT pervoe, LNGNT vtoroe)
             }
         }
         else
-            otvet = pervoe.n > vtoroe.n? 2: 1;
+            otvet = (pervoe.n > vtoroe.n? 2: 1);
     }
     else
         otvet = -1;

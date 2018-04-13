@@ -4,16 +4,20 @@
 #include "longNat.h"
 #include "longNatFunctions.h"
 #include "helpFunctions.h"
-
+#include "../Output/outputN.h"
+#include<iostream>
 LNGNT MOD_NN_N(LNGNT a, LNGNT b)
     {
-        LNGNT ans;
+        LNGNT ans,p;
 		if (COM_NN_D(a, b) == 1)swapN(&a,&b);
         int error = 0;
         if(a.A && b.A)
             {
                 LNGNT k = DIV_NN_N(a, b);
-                ans = SUB_NN_N(a, MUL_NN_N(b, k));
+				p = MUL_NN_N(b, k);
+				freeN(&k);
+                ans = SUB_NN_N(a, p);
+				freeN(&p);
             }
         else
             error = 1;

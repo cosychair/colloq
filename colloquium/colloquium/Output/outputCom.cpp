@@ -7,9 +7,13 @@ using namespace std;
 void greeting() {
 	system("cls");
 	cout << "**********COMPUTER ALGEBRA SYSTEM**********" << endl;
+	cout << endl;
 	cout << "This system affords you an opportunity of working with long numbers." << endl;
-	cout << "Dont forget to visit menu \"authors\" to learn more." << endl;
+	cout << endl;
+	cout << "Don`t forget to visit menu \"authors\" to learn more." << endl;
+	cout << endl;
 	cout << "If program stops printing text press enter." << endl;
+	cout << endl;
 	hint();
 }
 
@@ -20,7 +24,8 @@ void hint() {
 	cout << "Q - fractions," << endl;
 	cout << "P - polynoms," << endl;
 	cout << "A -  authors," << endl;
-	cout << "E - Exit." << endl;
+	cout << "E - Exit." << endl;	
+	cout << endl;
 	cout << "To select the representation you should write it`s letter to the console and press \"enter\" button." << endl;
 	cout << "Example: N" << endl;
 }

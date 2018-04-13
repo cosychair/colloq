@@ -3,7 +3,7 @@
 #include "longNat.h"
 #include "longNatFunctions.h"
 #include "helpFunctions.h"
-
+#include "../Output/outputN.h"
 LNGNT DIV_NN_Dk(LNGNT pervoe,LNGNT vtoroe)
 {
     int error = 0,
@@ -11,7 +11,7 @@ LNGNT DIV_NN_Dk(LNGNT pervoe,LNGNT vtoroe)
     LNGNT answer;
     if(pervoe.A && vtoroe.A)
     {
-        LNGNT a;
+        LNGNT a, b;
         int comp, len = 0;
         a.n = vtoroe.n;
         a.A = (int*) malloc(a.n*sizeof(int));
@@ -26,15 +26,18 @@ LNGNT DIV_NN_Dk(LNGNT pervoe,LNGNT vtoroe)
             *(a.A+vtoroe.n) = *(vtoroe.A+vtoroe.n);
         }
         len = a.n;
+
         do
         {
-
             ++k;
-            a = SUB_NN_N(a, vtoroe);
-            comp = COM_NN_D(a,vtoroe);
+            b = SUB_NN_N(a, vtoroe);
+			freeN(&a);
+            comp = COM_NN_D(b,vtoroe);
             error = comp == -1;
+			a = b;
         }
         while(!error && (comp == 2 || comp == 0));
+		freeN(&a);
         answer.n = 1;
         answer.A = (int*) malloc(sizeof(int));
         *(answer.A) = k;

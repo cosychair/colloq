@@ -11,24 +11,35 @@ LNGNT GCF_NN_N(LNGNT x, LNGNT y)
     int error = 0;
     if(x.A && y.A)
     {
-        LNGNT k;
-    
-		if (COM_NN_D(x, y) == 1)
-			swapN(&x, &y);
+        LNGNT a, b, p;
+		a.A = (int*)malloc(x.n * sizeof(int));
+		a.n = x.n;
+		b.A = (int*)malloc(y.n * sizeof(int));
+		b.n = y.n;
+		for (int i = 0; i < a.n; ++i)
+			a.A[i] = x.A[i];
+		for (int i = 0; i < b.n; ++i)
+			b.A[i] = y.A[i];
+		if (COM_NN_D(a, b) == 1)
+			swapN(&a, &b);
         else;
         int l = 0;
 		int comp;
         do
         {
-            x = MOD_NN_N(x, y);
-            comp = COM_NN_D(x, y);
-			l = NZER_N_B(x) && NZER_N_B(y);
+            p = MOD_NN_N(a, b);
+			freeN(&a);
+			a = p;
+            comp = COM_NN_D(a, b);
+			l = NZER_N_B(a) && NZER_N_B(b);
             if(comp == 1)
-				swapN(&x, &y);
+				swapN(&a, &b);
 			else;
         }
         while (l);
-        s = x;	
+		
+        s = a;	
+		freeN(&b);
     }
     else
         error = 1;

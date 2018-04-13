@@ -2,20 +2,25 @@
 #include <iostream>
 #include "longNat.h"
 #include "longNatFunctions.h"
-
+#include "../Output/outputN.h"
 LNGNT MUL_NN_N(LNGNT First, LNGNT Second)
 {
-	LNGNT ans;
-	LNGNT a;
+	LNGNT ans, t;
+	LNGNT a,b;
 	if (First.A && Second.A)
 	{
 		ans.n = First.n>Second.n ? Second.n : First.n;
 		ans.A = (int*)calloc(ans.n, sizeof(int));
+		bool p = true;
 		for (int i = First.n - 1; i >= 0; --i)
 		{
 			a = MUL_ND_N(Second, *(First.A + i));
-			a = MUL_Nk_N(a, First.n - i - 1);
-			ans = ADD_NN_N(a, ans);
+			b = MUL_Nk_N(a, First.n - i - 1);
+			t = ADD_NN_N(b, ans);
+			freeN(&ans);
+			ans = t;
+			//freeN(&a);
+			freeN(&b);
 		}
 	}
 	else

@@ -73,7 +73,8 @@ LNGNT SUB_NN_N(LNGNT x, LNGNT y)
 		{
 			sub.A[sub.n - (x.n - i)] = z[i];
 		}
+		
 	};
-	
+	free(z);
 	return(sub);
 }

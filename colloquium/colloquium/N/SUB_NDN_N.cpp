@@ -3,7 +3,7 @@
 #include "longNat.h"
 #include "longNatFunctions.h"
 #include "helpFunctions.h"
-
+#include "../Output/outputN.h"
 LNGNT SUB_NDN_N(LNGNT fNumb, LNGNT sNumb, int k)
     {
         int error = 0;
@@ -18,6 +18,7 @@ LNGNT SUB_NDN_N(LNGNT fNumb, LNGNT sNumb, int k)
                             swapN(&fNumb, &sNumb);
                         sNumb = MUL_ND_N(sNumb, k);
                         answer = SUB_NN_N(fNumb, sNumb);
+						freeN(&sNumb);
                     }
             }
         else
