@@ -5,9 +5,10 @@
 using namespace std;
 
 void greeting() {
+	system("cls");
 	cout << "**********COMPUTER ALGEBRA SYSTEM**********" << endl;
 	cout << "This system affords you an opportunity of working with long numbers." << endl;
-	cout << "Dont foget to visit menu “authors” to learn mort." << endl;
+	cout << "Dont foget to visit menu â€œauthorsâ€ to learn mort." << endl;
 	cout << "If program stops printing text print enter." << endl;
 	hint();
 }
