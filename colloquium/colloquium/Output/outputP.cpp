@@ -8,18 +8,21 @@ using namespace std;
 
 void printP(PLNM a) {
 	int i = 0, f=0;
-	if (a.deg == 0 && a.C[0].den.A[0] == 0)cout << "0"<<endl;
-	while (a.deg >= 0) {
-		if (a.C[i].num.A&&a.C[i].num.A[0] != 0) {
-			if (a.C[i].num.sign == 0&&f)cout << "+";
-			printQ(a.C[i]);
-			if (a.deg > 0)cout << "x";
-			if (a.deg > 1)cout<<"^"<< a.deg;;
-			f = 1;
+	if (a.C) {
+		if (a.C[0].num.A[0] == 0)cout << "0" << endl;
+		while (a.deg >= 0) {
+			if (a.C[i].num.A&&a.C[i].num.A[0] != 0) {
+				if (a.C[i].num.sign == 0 && f)cout << "+";
+				printQ(a.C[i]);
+				if (a.deg > 0)cout << "x";
+				if (a.deg > 1)cout << "^" << a.deg;;
+				f = 1;
+			}
+			a.deg--;
+			i++;
 		}
-		a.deg--;
-		i++;
 	}
+	else cout << "ERROR";
 	cout << endl;
 }
 

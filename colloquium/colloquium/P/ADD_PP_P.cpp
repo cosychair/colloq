@@ -8,7 +8,7 @@ PLNM ADD_PP_P(PLNM P, PLNM V)
 {
 	PLNM A;
 	if (P.C && V.C)
-	{
+	{		
 		if (P.deg >= V.deg)
 		{
 			A.deg = P.deg;

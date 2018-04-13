@@ -6,19 +6,19 @@
 
 PLNM MUL_PQ_P(PLNM M, FRCT Q)
 {
-	//PLNM A;
+	PLNM A;
 
 	if (M.C)
 	{
-		//A.deg = M.deg;
-		//A.C = (FRCT*)malloc((A.deg +1) * sizeof(FRCT));
+		A.deg = M.deg;
+		A.C = (FRCT*)malloc((A.deg +1) * sizeof(FRCT));
 
 		for (int i = 0;i < (M.deg +1);++i)
-			M.C[i] = MUL_QQ_Q(M.C[i], Q);
+			A.C[i] = MUL_QQ_Q(M.C[i], Q);
 	}
 	else
 		printf("Polynomial doesn`t exist!\n");
 
-	return M;
+	return A;
 }
 

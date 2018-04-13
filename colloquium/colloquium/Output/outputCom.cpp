@@ -8,7 +8,7 @@ void greeting() {
 	system("cls");
 	cout << "**********COMPUTER ALGEBRA SYSTEM**********" << endl;
 	cout << "This system affords you an opportunity of working with long numbers." << endl;
-	cout << "Dont foget to visit menu â€œauthorsâ€ to learn mort." << endl;
+	cout << "Dont foget to visit menu “authors” to learn mort." << endl;
 	cout << "If program stops printing text print enter." << endl;
 	hint();
 }
@@ -45,5 +45,4 @@ void printPLN() {
 	cout << "Please print the polynomial." << endl;
 	cout << "Example: 3/2x^6+1/2x^3+2/1x^1-6/3" << endl;
 	cout << "Please notice there aren`t any spaces!" << endl;
-	cout << "Tap enter twice, after you write the polyomial into the console." << endl;
 }
