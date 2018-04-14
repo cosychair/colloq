@@ -19,7 +19,6 @@ LNGNT MUL_NN_N(LNGNT First, LNGNT Second)
 			t = ADD_NN_N(b, ans);
 			freeN(&ans);
 			ans = t;
-			//freeN(&a);
 			freeN(&b);
 		}
 	}
