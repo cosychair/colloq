@@ -27,10 +27,9 @@ void printP(PLNM a) {
 }
 
 void freeP(PLNM* a) {
-	while (a->deg > 0) {
-		freeQ((a->C));
-		a->deg--;
-	}
+	for (int i = 0; i <= a->deg; i++)
+		freeQ(&(a->C[i]));
+	a->deg = 0;
 }
 
 void printMenuP() {
@@ -50,8 +49,8 @@ void printMenuP() {
 	cout << "9 - DIV_PP_P - Quotient from dividing one polynomial on another(divider isn`t zero)" << endl;
 	cout << "10 - MOD_PP_P - Residue from dividing one polynomial on another(divider isn`t zero)" << endl;
 	cout << "11 - GCF_PP_P - GCF of polynomials." << endl;
-	cout << "12 - DER_P_P - Multiple roots." << endl;
-	cout << "13 - NMR_P_P - Error! Wrong number." << endl;
+	cout << "12 - DER_P_P - Derivative of polynomial." << endl;
+	cout << "13 - NMR_P_P - Multiple roots." << endl;
 	cout << endl;
 	cout << "To select the function you should write it`s number to the console and press \"enter\" button." << endl;
 	cout << "Example: 1" << endl;

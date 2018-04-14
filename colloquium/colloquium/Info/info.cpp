@@ -568,7 +568,7 @@ void infoP()
 			st = st * 10;
 		}
 		system("cls");
-		showInfoMenuN(number);
+		showInfoMenuP(number);
 		chooseFunctionP(number);
 	//}
 }
