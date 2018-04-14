@@ -11,7 +11,6 @@ PLNM ADD_PP_P(PLNM P, PLNM V)
 	PLNM A;
 	if (P.C && V.C)
 	{
-		std::cout << P.deg << '\n';
 		A.deg = P.deg+1;
 		int k = A.deg;
 		A.C = (FRCT*)malloc(k * sizeof(FRCT));
@@ -19,11 +18,7 @@ PLNM ADD_PP_P(PLNM P, PLNM V)
 		//A.C = new FRCT[k];
 		if (P.deg >= V.deg)
 		{
-			
-			std::cout << P.deg<<'\n';
-			std::cout << V.deg + P.deg << '\n';
-			
-			//A.C = new FRCT[A.deg + 1];
+				//A.C = new FRCT[A.deg + 1];
 			for (int var = 0;var < (V.deg+1);++var)
 				*(A.C + P.deg - var)  = ADD_QQ_Q(*(P.C+P.deg - var), *(V.C+V.deg-var));
 
