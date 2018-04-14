@@ -3,7 +3,7 @@
 #include "longInteger.h"
 #include "../Z/longIntFunctions.h"
 #include "../N/longNatFunctions.h"
-
+#include "../Output/outputN.h"
 LNGINT ADD_ZZ_Z(LNGINT x, LNGINT y)
 {
     LNGINT sum;
@@ -26,6 +26,7 @@ LNGINT ADD_ZZ_Z(LNGINT x, LNGINT y)
 				s = SUB_NN_N(a, b);
 			}
 			sum = TRANS_N_Z(s);
+			freeN(&s);
 			sum.sign = 0;
 			if ((g == 1 && f == 1) || (COM_NN_D(a, b) == 2 &&  f == 1)|| (COM_NN_D(a, b) == 1 && g == 1))
 				sum = MUL_ZM_Z(sum); 
@@ -33,6 +34,8 @@ LNGINT ADD_ZZ_Z(LNGINT x, LNGINT y)
         }
 	    else
 	        error = 1;
+		freeN(&a);
+		freeN(&b);
     }
     else
         error = 1;    

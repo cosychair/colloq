@@ -4,6 +4,7 @@
 #include "../Z/longIntFunctions.h"
 #include "../N/longNatFunctions.h"
 #include "../N/helpFunctions.h"
+#include "../Output/outputN.h"
 using namespace std;
 
 LNGINT MUL_ZZ_Z(LNGINT ln, LNGINT lt)
@@ -29,6 +30,8 @@ LNGINT MUL_ZZ_Z(LNGINT ln, LNGINT lt)
                             *(ttr.A + i) = *(lx.A+i);
                         if(ln.sign != lt.sign)
 							ttr = MUL_ZM_Z(ttr); 
+						else;
+						freeN(&lx);
 						if (ttr.A[0] == 0 )
 						{
 							ttr.n = 1;
@@ -38,6 +41,8 @@ LNGINT MUL_ZZ_Z(LNGINT ln, LNGINT lt)
                     }
                 else
                     error = 1;
+				freeN(&lnN);
+				freeN(&ltN);
             }
         else
             error = 1;

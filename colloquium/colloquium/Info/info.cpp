@@ -38,13 +38,14 @@ void printAuthors() {
 	cout << "Desyatnikov Gregory" << endl;	sleep(100);
 	cout << "Miller Vlad" << endl;	sleep(100);
 	cout << "Lebedev Anton" << endl<<endl; sleep(200);
-	cout << "Person who knows all code because he did web version:" << endl; 
-	cout << "Zenkin Vlad" << endl << endl;sleep(200);
+	cout << "Person who knows all code because he eliminated all memory leaks:" << endl; 
+	cout << "Desyatnikov Gregory" << endl;	sleep(200);
 	cout << "And our nice rapid function developers:" << endl;
 	cout << "Evich Nikita" << endl;	sleep(100);
 	cout << "Mazurkevich Dima" << endl;	sleep(100);
 	cout << "Karmanov Dmitrii" << endl;	sleep(100);
 	cout << "Krasotkin Ivan" << endl;	sleep(100);
+	cout << "Zenkin Vlad" << endl << endl; sleep(100);
 	cout << "Lunev Pavel" << endl;	sleep(100);
 	cout << "Mazurkevich Dima" << endl;	sleep(100);
 	cout << "Bogdanov Kirill" << endl << endl;	sleep(200);

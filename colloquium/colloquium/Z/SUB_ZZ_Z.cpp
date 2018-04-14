@@ -4,7 +4,7 @@
 #include "../Z/longIntFunctions.h"
 #include "../N/longNatFunctions.h"
 #include "../N/helpFunctions.h"
-
+#include "../Output/outputN.h"
 LNGINT SUB_ZZ_Z(LNGINT num1, LNGINT num2)
 {
 	LNGINT result;
@@ -37,13 +37,15 @@ LNGINT SUB_ZZ_Z(LNGINT num1, LNGINT num2)
 				result.A = (int*)malloc(c.n * sizeof(int));
 				for (int i = 0; i < c.n; ++i)
 					*(result.A + i) = *(c.A + i);
-
+				freeN(&c);
 				if (fl)
 					result = MUL_ZM_Z(result);
 			}
 		}
 		else
 			error = 1;
+		freeN(&num1N);
+		freeN(&num2N);
 	}
 	else
 		error = 1;
